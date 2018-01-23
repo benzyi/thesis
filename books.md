@@ -1,4 +1,4 @@
-###Books at Bobst BYU
+### Books at Bobst BYU
 
 Stiegler, Zack. Regulating the web: network neutrality and the fate of the open internet. Lanham: Lexington Books, 2014.
 
