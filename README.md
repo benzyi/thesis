@@ -2,7 +2,7 @@
 
 ### A memorial and historical archive of the Los Angeles Riots in 1992 through the lens of those who lost their lives.
 
-[![preview.png](https://static1.squarespace.com/static/57f7eaad2994cab2a8df591c/t/5ab1d594562fa7620d338b58/1521604095780/lariots.gif?format=1500w)](https://benzyi.github.io/thesis/index.html)
+[![preview.png](https://static1.squarespace.com/static/57f7eaad2994cab2a8df591c/t/5ab1d594562fa7620d338b58/1521604095780/lariots.gif?format=1500w)](https://benzyi.github.io/thesis/)
 
 ### Abstract
 The Los Angeles Riots of 1992 has a personal story to me that I only realized after doing research many years later. In order to follow through the events that took place while I was quarantined at home in the midst of the chaos, I created this visualization that had an hour-by-hour record of the events that happened from the beginning of the violence to the end of the violence. The only consequence I personally faced was not being able to get the Flamin' Hot Lays I got at my neighborhood market, Jay's Market, but instead had to go to my dad's friend's liquor store. Little did I know that the liquor store stood because my dad among other Koreans living in Los Angeles, acquired rifles and stood guard on the rooftop to deter looters.
