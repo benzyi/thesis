@@ -13,11 +13,36 @@
 </head>
 
 <body>
+	<!--FLEXBOX-->
+<div class="flex-container images dayOneImages" style="visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id="test" src="http://placehold.it/300x300" style="width: 300px; height: 300px;" />
+            <figcaption id="test" class="caption" style="display: none;">Our grads.</figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='testA' src="http://placehold.it/300x300" style="width: 300px; height: 300px;" />
+            <figcaption id="testA" class="caption" style="display: none;">A building</figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='something' src="http://placehold.it/300x300" style="width: 300px; height: 300px;" />
+            <figcaption id="something" class="caption" style="display: none;">The campus.</figcaption>
+        </figure>
+    </div>
+</div>
+
+	<!--<div id="imageTest" class="imageContainer" style="top: 1257px;left: 1257px; width: 500px; height: 500px;"></div>-->
+	<!--<div id='caption' class="imageContainer" style="top: 1760px;left: 1257px; width: 500px; height: 100px;"-->
 	<div id="dayOneCircle" style="top: 1257px;left: 1257px;"></div>
 	<div id="dayTwoCircle" style="top: 983px;left: 983px;"></div>
 	<div id="dayThreeCircle" style="top: 685px;left: 685px;"></div>
 	<div id="dayFourCircle" style="top: 388px;left: 388px;"></div>
 	<div id="dayFiveCircle" style="top: 100px;left: 100px;"></div>
+	
 <div class="wrapper">
 	<!-- Background -->
 	<div id="background" class="artboard" height='3456' width="3456">
@@ -34,8 +59,6 @@
 			<p class="title">The 1992 Los Angeles Riots</p>
 		</div>
 		<div class="absolute" style="top:4.5139%;left:2.6769%;width:19.5313%;">
-			<div class="g-shape" style="top:4.5139%;left:2.6769%;width:19.5313%;">
-		</div>
 			<p class="summary">On April 29, 1992, the Los Angeles riots began with a gathering on Florence and Normandie where the police set a precedence that would recur throughout the coming days: they retreated. Sparked by the acquittal for the four officers involved in the Rodney King beating, and fueled by a growing distrust of the Korean-American community by the African-American community in Los Angeles after an incident a year prior when a Korean storeowner of Empire Liquor was essentially acquitted for the shooting and killing 15-year old Latisha Harlins, Los Angeles became a war zone with its targets set on Korean-American businesses. Over 2,000 of the 3,100 businesses looted or destroyed were owned by Korean-Americans. The police abandoned Angelenos to fend for themselves, which resulted in a surge of gun purchases by the Korean-American community to defend their businesses.</p>
 			<p>&nbsp;</p>
 			<p class="summary">This graphic takes a look at the hour-by-hour rundown of the chaos and action taken as detailed by the Los Angeles Times&rsquo; 2002 article titled &ldquo;Charting the Hours of Chaos.&rdquo; The events have been aligned to the hour of the day it took place, while the day of the event has been mapped starting from the inner circle moving outwards to show the progression of days. The red circle indicates violence occuring over 24 hours with 12 hours representing one full cycle. Darker red means two 12-hour cycles.</p>
@@ -568,13 +591,7 @@
 			<p class="g-pstyle14">Nearly 8,500 members of the Marines, Army and National Guard are posted throughout the county.</p>
 		</div>
 		
-		<!--name test-->
-		<div id="tranh-lam" class="g-deaths absolute" style="top:91.6956%;right:71.8706%;width:3.125%;">
-			<p class="d2-names tranh">Tranh Lam</p>
-		</div>
-		<div id="edward-song-lee" class="g-deaths absolute" style="top:92.6956%;right:71.8706%;width:3.225%;">
-			<p class="d2-names edward">Edward Song Lee</p>
-		</div>
+		<!--names-->
 		
 		<div id="arturo-c-miranda" class="g-deaths absolute" style="top:74.2477%;right:90.4592%;width:4.919%;">
 			<p class="d1-names">Arturo C. Miranda</p>
@@ -704,7 +721,6 @@
 			<p class="g-pstyle7">Aaron Ratinoff </p>
 		</div>
 		<div id="g-ai0-35" class="g-deaths absolute" style="top:89.3519%;right:75.7942%;width:5.1215%;">
-			<p class="g-pstyle6">Matthew D. Haines</p>
 		</div>
 		<div id="g-ai0-36" class="g-deaths absolute" style="top:89.9306%;left:74.7091%;width:3.559%;">
 			<p class="g-pstyle7">William Ross </p>
@@ -721,11 +737,11 @@
 		<div id="g-ai0-40" class="g-deaths absolute" style="top:91.4641%;left:72.065%;width:3.8194%;">
 			<p class="g-pstyle7">Jose Solorzano  </p>
 		</div>
-		<div id="g-ai0-41" class="g-deaths absolute" style="top:91.6956%;right:71.8706%;width:3.125%;">
-			<p class="g-pstyle8">Tranh Lam</p>
+		<div id="tranh-lam" class="g-deaths absolute" style="top:91.6956%;right:72.8706%;">
+			<p class="g-pstyle8 tranh">Tranh Lam</p>
 		</div>
-		<div id="g-ai0-42" class="g-deaths absolute" style="top:92.5347%;right:70.3131%;width:4.7743%;">
-			<p class="g-pstyle8">Edward Song Lee </p>
+		<div id="edward-song-lee" class="g-deaths absolute" style="top:92.5347%;right:71.3131%">
+			<p class="d2-names edward">Edward Song Lee </p>
 		</div>
 		<div id="g-ai0-43" class="g-deaths absolute" style="top:92.8819%;left:69.3319%;width:4.6586%;">
 			<p class="g-pstyle9">Elbert O. Wilkins </p>
@@ -790,6 +806,9 @@ var dayTwo = d3.selectAll('.dayTwo p.thursday');
 var dayThree = d3.selectAll('.dayThree');
 var dayFour = d3.selectAll('.dayFour');
 var dayFive = d3.selectAll('.dayFive');
+
+var dayOneImages = d3.selectAll('.dayOneImages');
+
 var edward = d3.selectAll('p.edward');
 var tranh = d3.selectAll('#tranh-lam p.tranh');
 
@@ -854,19 +873,20 @@ var tranh = d3.selectAll('#tranh-lam p.tranh');
 
 // didnt work
 
+//START OF NAME POSITIONING TO ORIGINAL POSITION
 var button = document.getElementById("edward-song-lee");
+var button2 = document. getElementById("tranh-lam");
 // var button = document.getElementsByClassName("g-deaths");
-// var image = document.getElementById("chrome_browser");
 
 var status = "original";
 
-var originalTop, originalRight;
-var nameAtTheCenter = new Boolean(0);
+var originalTop, originalRight; //var to be filled later. currently a placeholder.
+var nameAtTheCenter = new Boolean(0); //trying to make this a boolean
 var theNameAtCenter = d3.select(this)
 //nameAtTheCenter (boolean) 
 //whichIsThatNameAtCenter (string by elementID d3.select(#)
 
-// button.onclick = function () { //TESTING
+// button.onclick = function () { //TESTING TO SCALE -- DIDNT WORK
 //     switch (status) {
 //         case "topRightCorner":
         	
@@ -911,19 +931,82 @@ var theNameAtCenter = d3.select(this)
 //     }
 // };
 
+//ORIGINAL POSITIONER THAT WORKS FOR EDWARD
 button.onclick = function () {
     switch (status) {
         case "topRightCorner":
 			
 			originalTop = button.style.top;
         	originalRight = button.style.right;
-        	console.log(originalTop);
+        	// console.log(originalTop);
         	
     		button.style.top="42%";
             button.style.right="46%";
             button.style.transition="all 3s";
-            // button.style.font-size="50px"; //does not work
+            button.style.fontSize="50px";
             button.style.position="absolute";
+            status = "original";
+            nameAtTheCenter = 0;
+            break;
+
+        case "original":
+        	// console.log(button.style.top);
+            // nameAtTheCenter = 0;
+            button.style.top = originalTop;
+            button.style.right = originalRight;
+            button.style.fontSize = "20px";
+            status = "topRightCorner";
+            nameAtTheCenter = 1;
+            break;
+    }
+};
+
+// if (nameAtTheCenter = 1) { //does not work
+// 	button.onclick = function () {
+// 		nameAtTheCenter = 0;
+// 		console.log(nameAtTheCenter);
+// 	};
+// }
+
+// else if (nameAtTheCenter = 0) {
+// 	button.onclick = function () {
+// 		nameAtTheCenter = 1;
+// 		console.log(nameAtTheCenter);
+// 	};
+// }
+
+// if (nameAtTheCenter = 0) { // also does not work
+// 	button.onclick = function () {
+// 		switch(status) {
+// 			case "nameIsThere":
+// 				nameAtTheCenter = 1;
+// 				console.log(nameAtTheCenter);
+// 				break;
+			
+// 			case "nameNotThere":
+// 				nameAtTheCenter = 0;
+// 				console.log(nameAtTheCenter);
+// 				break;
+// 		}
+// 	}
+// }
+
+// else (nameAtTheCenter = 1);
+
+//ORIGINAL POSITIONER THAT WORKS FOR TRANH
+button2.onclick = function () {
+    switch (status) {
+        case "topRightCorner":
+			
+			originalTop = button2.style.top;
+        	originalRight = button2.style.right;
+        	console.log(originalTop);
+        	
+    		button2.style.top="42%";
+            button2.style.right="46%";
+            button2.style.transition="all 3s";
+            button2.style.fontSize="50px";
+            button2.style.position="absolute";
             status = "original";
             // nameAtTheCenter = 1;
             break;
@@ -931,14 +1014,18 @@ button.onclick = function () {
         	
             
         case "original":
-        	console.log(button.style.top);
+        	console.log(button2.style.top);
             // button.style.top="" = "absolute";
-            button.style.top = originalTop;
-            button.style.right = originalRight;
+            button2.style.top = originalTop;
+            button2.style.right = originalRight;
+            button2.style.fontSize = "20px";
             status = "topRightCorner";
             break;
     }
 };
+
+// TRYING OUT WHAT DANIEL SUGGESTED TO MOVE NAMES
+// THIS CODE (MINUS THE NEW STUFF I TRIED) WORKS TO MOVE NAMES TO CENTER BUT NOT BACK
 
 // d3.selectAll('div') // attempt at moving the position back
 // 	.attr('original', d3.select(this).attr('style'));
@@ -979,87 +1066,98 @@ button.onclick = function () {
 d3.select('#dayOneCircle') //select dayOne records
 	.on('click', function() {
 		console.log('circle works');
+		dayOne.style('opacity', '1');
 		dayTwo.style('opacity', '0.2');
 		dayThree.style('opacity', '0.2');
 		dayFour.style('opacity', '0.2');
 		dayFive.style('opacity', '0.2');
+		dayOneImages.style('visibility', 'visible'); //brings up images
 	});
 	
-d3.select('#dayOneCircle') //de-select dayOne records
-	.on('mouseout', function() {
-		dayTwo.style('opacity', '1');
-		dayThree.style('opacity', '1');
-		dayFour.style('opacity', '1');
-		dayFive.style('opacity', '1');
-	});
+// d3.select('#dayOneCircle') //de-select dayOne records
+// 	.on('mouseout', function() {
+// 		dayTwo.style('opacity', '1');
+// 		dayThree.style('opacity', '1');
+// 		dayFour.style('opacity', '1');
+// 		dayFive.style('opacity', '1');
+// 	}); 
+//removing mouseout after adding images
 	
 d3.select('#dayTwoCircle') //select dayTwo records
 	.on('click', function() {
 		console.log('circle 2 works');
 		dayOne.style('opacity', '0.2');
+		dayTwo.style('opacity', '1');
 		dayThree.style('opacity', '0.2');
 		dayFour.style('opacity', '0.2');
 		dayFive.style('opacity', '0.2');
+		dayOneImages.style('visibility', 'hidden'); //hides dayOneImages
 	});
 	
-d3.select('#dayTwoCircle') //de-select dayTwo records
-	.on('mouseout', function() {
-		dayOne.style('opacity', '1');
-		dayThree.style('opacity', '1');
-		dayFour.style('opacity', '1');
-		dayFive.style('opacity', '1');
-	});
+// d3.select('#dayTwoCircle') //de-select dayTwo records
+// 	.on('mouseout', function() {
+// 		dayOne.style('opacity', '1');
+// 		dayThree.style('opacity', '1');
+// 		dayFour.style('opacity', '1');
+// 		dayFive.style('opacity', '1');
+// 	});
 	
 d3.select('#dayThreeCircle') //select dayThree records
 	.on('click', function() {
 		console.log('circle 2 works');
 		dayOne.style('opacity', '0.2');
 		dayTwo.style('opacity', '0.2');
+		dayThree.style('opacity', '1');
 		dayFour.style('opacity', '0.2');
 		dayFive.style('opacity', '0.2');
+		dayOneImages.style('visibility', 'hidden');
 	});
 	
-d3.select('#dayThreeCircle') //de-select dayThree records
-	.on('mouseout', function() {
-		dayOne.style('opacity', '1');
-		dayTwo.style('opacity', '1');
-		dayFour.style('opacity', '1');
-		dayFive.style('opacity', '1');
-	});
+// d3.select('#dayThreeCircle') //de-select dayThree records
+// 	.on('mouseout', function() {
+// 		dayOne.style('opacity', '1');
+// 		dayTwo.style('opacity', '1');
+// 		dayFour.style('opacity', '1');
+// 		dayFive.style('opacity', '1');
+// 	});
 	
 d3.select('#dayFourCircle') //select dayFour records
 	.on('click', function() {
 		console.log('circle 2 works');
 		dayOne.style('opacity', '0.2');
-		dayThree.style('opacity', '0.2');
 		dayTwo.style('opacity', '0.2');
+		dayThree.style('opacity', '0.2');
+		dayFour.style('opacity', '1');
 		dayFive.style('opacity', '0.2');
+		dayOneImages.style('visibility', 'hidden');
 	});
 	
-d3.select('#dayFourCircle') //de-select dayFour records
-	.on('mouseout', function() {
-		dayOne.style('opacity', '1');
-		dayThree.style('opacity', '1');
-		dayTwo.style('opacity', '1');
-		dayFive.style('opacity', '1');
-	});
+// d3.select('#dayFourCircle') //de-select dayFour records
+// 	.on('mouseout', function() {
+// 		dayOne.style('opacity', '1');
+// 		dayThree.style('opacity', '1');
+// 		dayTwo.style('opacity', '1');
+// 		dayFive.style('opacity', '1');
+// 	});
 	
 d3.select('#dayFiveCircle') //select dayFive records
 	.on('click', function() {
 		console.log('circle 2 works');
 		dayOne.style('opacity', '0.2');
+		dayTwo.style('opacity', '0.2');
 		dayThree.style('opacity', '0.2');
 		dayFour.style('opacity', '0.2');
-		dayTwo.style('opacity', '0.2');
+		dayFive.style('opacity', '1');
+		dayOneImages.style('visibility', 'hidden');
 	});
 	
-d3.select('#dayFiveCircle') //de-select dayFive records
-	.on('mouseout', function() {
-		dayOne.style('opacity', '1');
-		dayThree.style('opacity', '1');
-		dayFour.style('opacity', '1');
-		dayTwo.style('opacity', '1');
-	});
+// d3.select('#dayFiveCircle') //de-select dayFive records
+// 	.on('mouseout', function() {
+// 		dayOne.style('opacity', '1');
+// 		dayThree.style('opacity', '1');
+// 		dayFour.style('opacity', '1');
+// 		dayTwo.style('opacity', '1');
+// 	});
 
 d3.selectAll('.g-deaths') //hover effect for all names
 	.on('mouseover',function() {
@@ -1075,26 +1173,9 @@ d3.selectAll('.g-deaths') //hover effect for all names
 			.style('color', 'rgb(0,134,255)')
 			.style('opacity', '0.75');
 		});
-		
-// dayTwo.on('mouseover', function() {
-// 	console.log(d3.select(this))
-// 	d3.selectAll('.dayTwo p.thursday')
-// 	.style('color', function (d,i) {
-// 		if ('black') { return 'red';} //if-else does not work
-// 		else { return 'red'; }
-// 		});
-// 	});
-
-	
-// dayTwo.on('mouseout', function() {
-// 	d3.selectAll('.dayTwo p.thursday')
-// 		.attr('style', function(d,i) {
-// 			return 'color: black';
-// 		});
-// 	});
 
 		
-edward.on('mouseover', function() {
+edward.on('mouseover', function() { //hover effect for edward
 	console.log(d3.select(this))
     d3.selectAll('p.edward')
     	// .attr('style', 'color: blue');
@@ -1102,27 +1183,16 @@ edward.on('mouseover', function() {
     	.style('color', function(d,i) {
 			return 'blue';
 		});
-   	});
-    	
-// edward.on('mouseout', function () {
-// 	d3.selectAll('p.edward')
-// 		.style('color', function(d,i) {
-// 			return 'black';
-// 		});
-// })
+  	});
 
-edward.on('click', function() {
+edward.on('click', function() { //click back to normal black text
 	d3.selectAll('p.edward')
 		.attr('style', function(d,i) {
 			return 'color: black';
 		});
-	// d3.select('.edward-song-lee p.d1-names')
-	// 	.attr('style', function(d,i) {
-	// 		return 'font-size: 50px';
-	// 	});
 	});
 
-tranh.on('mouseover', function() {
+tranh.on('mouseover', function() { //hover effect for tranh
 	console.log(d3.select(this))
     d3.selectAll('#tranh-lam p.d2-names')
     	// .attr('style', 'color: blue');
@@ -1130,23 +1200,32 @@ tranh.on('mouseover', function() {
     	.attr('style', function(d,i) {
 			return 'color: blue';
 		});
-	d3.select('#tranh-lam p.d2-names')
+		
+	d3.select('#tranh-lam p.d2-names') //increase font size for tranh?
 		.attr('style', function(d,i) {
 			return 'font-size: 50px';
 		});
-	// d3.selectAll('p.tranh')
-	// 	.attr('style', function(d,i) {
-	// 		return 'color: black';
-	// 	});
     });
 
-tranh.on('click', function() {
+tranh.on('click', function() { //click to turn text back to black for tranh
 	d3.selectAll('p.tranh')
 		.attr('style', function(d,i) {
 			return 'color: black';
 		});
 	});
 
+//FLEXBOX SCRIPT
+d3.selectAll('.flex-item img')
+                .on('mouseover', function (d, i, nodes, currentElement) {
+                    console.log(d3.select('#' + this.id))
+                    d3.selectAll('#' + this.id)
+                        .attr('style', 'display: block');
+                })
+                .on('mouseout', function () {
+                    d3.selectAll('.caption')
+                        .attr('style', 'display: none');
+                });
+//END FLEXBOX SCRIPT
 
 
 </script>

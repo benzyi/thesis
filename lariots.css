@@ -14,14 +14,6 @@ body { margin:0;position:absolute;top:0;right:0;bottom:0;left:0; }
 	display:block;
 	width:100% !important;
 }
-.g-shape {
-    shape-outside: polygon(100% 100%, 100% 0%, 73% 18%, 52% 48%, 52% 48%, 37% 79%, 37% 79%, 28% 100%, 100% 100%, 100% 100%);
-    float: right;
-    clip-path: polygon(100% 100%, 100% 0%, 73% 18%, 52% 48%, 52% 48%, 37% 79%, 37% 79%, 28% 100%, 100% 100%, 100% 100%);
-    background: red;
-    width: 50%;
-    height: 200px;
-}
 
 /*polygons for alignment START*/
 
@@ -107,8 +99,52 @@ p {
 	font-style: normal;
 }
 
-#dayOneCircle
-{
+/*FLEXBOX START*/
+.flex-container {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    align-items: center;
+    position: absolute;
+    z-index: 6;
+}
+
+.flex-item {
+    /*width: 350px;
+    height: null;*/
+    flex-grow: 1;
+    flex-basis: auto;
+    justify-content: flex-start;
+    display: flex;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 6;
+}
+
+.flex-item img {
+    cursor: pointer;
+    position: relative;
+    z-index: 6;
+}
+
+.caption {
+    width: 300px;
+    height: 100px;
+    background-color: blue;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex-basis: auto;
+    position: inherit;
+    z-index: 6;
+}
+/*FLEXBOX END*/
+
+/*CIRCLES FOR CLICKING*/
+#dayOneCircle {
 	background-color: transparent;
 	width: 940px;
 	height: 940px;
@@ -117,8 +153,7 @@ p {
 	z-index: 5;
 }
 
-#dayTwoCircle
-{
+#dayTwoCircle {
 	background-color: transparent;
 	width: 1490px;
 	height: 1490px;
@@ -127,8 +162,7 @@ p {
 	z-index: 4;
 }
 
-#dayThreeCircle
-{
+#dayThreeCircle {
 	background-color: transparent;
 	width: 2090px;
 	height: 2090px;
@@ -137,8 +171,7 @@ p {
 	z-index: 3;
 }
 
-#dayFourCircle
-{
+#dayFourCircle {
 	background-color: transparent;
 	width: 2680px;
 	height: 2680px;
@@ -147,8 +180,7 @@ p {
 	z-index: 2;
 }
 
-#dayFiveCircle
-{
+#dayFiveCircle {
 	background-color: transparent;
 	width: 3260px;
 	height: 3260px;
@@ -156,6 +188,7 @@ p {
 	position: absolute;
 	z-index: 1;
 }
+/*CIRCLES FOR CLICKING END*/
 
 .sunday-time {
 	height:17px;
