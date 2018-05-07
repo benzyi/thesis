@@ -53,7 +53,7 @@ body { margin:0;position:absolute;top:0;right:0;bottom:0;left:0; }
 	width:3456px;
 }
 p {
-	font-weight:500;
+	font-weight:600;
 	/*font-size:14px;*/
 	font-family: 'proxima-soft-condensed';
 	font-style: italic;
@@ -69,14 +69,10 @@ p {
 
 .g-deaths {
 	font-size:20px;
-	line-height:24px;
-	height:24px;
-	filter:alpha(opacity=50);
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-	opacity:0.5;
-	letter-spacing:-0.07em;
+	opacity:1;
 	color:rgb(170,13,0);
 	z-index: 7;
+	line-height: 20px
 }
 
 .title {
@@ -89,10 +85,8 @@ p {
 }
 .summary {
 	font-size:22px;
+	font-weight: 500;
 	line-height:26px;
-	filter:alpha(opacity=90);
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-	opacity:0.9;
 	text-align:justify;
 	color:rgb(255,255,255);
 	font-family: "adobe-caslon-pro", serif ;
@@ -131,14 +125,16 @@ p {
 }
 
 .caption {
-    width: 300px;
-    height: 100px;
-    background-color: blue;
+    max-width: 290px;
+    /*height: 100px;*/
+    padding: 5px;
+    background-color: white;
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-grow: 1;
     flex-basis: auto;
     position: inherit;
+    font-family: 'proxima-soft-condensed';
     z-index: 6;
 }
 /*FLEXBOX END*/
@@ -264,12 +260,10 @@ p {
 	color:rgb(0,134,255);
 }
 .d1-names {
-	letter-spacing:-0.07em;
 	/*color:rgb(0,134,255);*/
-	opacity: 0.75;
+	opacity: 1;
 }
 .d2-names {
-	letter-spacing:-0.07em;
 	color:rgb(0,134,255);
 }
 .g-pstyle17 {
@@ -417,23 +411,39 @@ p {
     visibility: hidden;
     font-family: 'proxima-soft-condensed';
     color: black;
-    font-weight: 100;
-    width: 300px;
-    top: -5px;
-    left: 105%; 
+    font-weight: 300;
+    font-size: 18px;
+    width: 500px;
+    bottom: 0px;
+    left: 115%; 
     background-color: white;
-    color: #fff;
     text-align: left;
-    padding: 5px 0;
+    padding: 5px;
     border-radius: 3px;
- 
-    /* Position the tooltip text - see examples below! */
     position: absolute;
-    z-index: 1;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltipRT .tooltiptextRT {
+    visibility: hidden;
+    font-family: 'proxima-soft-condensed';
+    color: black;
+    font-weight: 300;
+    font-size: 18px;
+    width: 500px;
+    bottom: 0px;
+    right: 115%; 
+    background-color: white;
+    text-align: left;
+    padding: 5px;
+    border-radius: 3px;
+    position: absolute;
+}
+
+.tooltipRT:hover .tooltiptextRT {
     visibility: visible;
 }
 

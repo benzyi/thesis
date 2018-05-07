@@ -18,7 +18,7 @@
     <div class="flex-item">
         <figure>
             <img id="test" src="http://placehold.it/300x300" style="width: 300px; height: 300px;" />
-            <figcaption id="test" class="caption" style="display: none;">Our grads.</figcaption>
+            <figcaption id="test" class="caption" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis congue ex. Fusce facilisis tellus nisi, sed molestie sem suscipit vel. Integer suscipit enim ut volutpat consequat. Curabitur sed rutrum sem, at porta enim. Duis accumsan elementum ornare. Nunc convallis velit venenatis erat sagittis, id maximus turpis cursus.</figcaption>
         </figure>
     </div>
     <div class="flex-item">
@@ -592,9 +592,10 @@
 		<div id="arturo-c-miranda" class="g-deaths absolute" style="top:74.2477%;right:90.4592%;width:4.919%;">
 			<p class="d1-names">Arturo C. Miranda</p>
 		</div>
-		<div id="elias-garcia-rivera" class="g-deaths absolute tooltip" style="top:72.7431%;right:91.1826%;width:4.9479%;">
+		<div id="elias-garcia-rivera" class="g-deaths absolute tooltip" style="top:72.7431%;right:92%;width:4.1%;">
 			<p class="d1-names">Elias Garcia Rivera</p>
-			<span class='tooltiptext'>i.e Agriculture, Industry, Services</span>
+			<span class='tooltiptext'>Elias Garcia Rivera, a 32-year-old Latino, died Dec. 16, 1992, at St. Joseph Medical Center in Burbank. He had been in critical condition with a fractured skull for nearly eight months. Garcia had been struck at the base of the skull during an altercation on Wednesday, April 29, at an apartment complex in the 12800 block of Vanowen Street in Valley Glen.
+			<br>On Oct. 25, 1993, Traville J. Craig, 19, was convicted of first-degree murder and sentenced to life in prison.</span>
 		</div>
 		<div id="jimmie-harris" class="g-deaths absolute" style="top:73.4954%;right:90.8426%;width:3.8484%;">
 			<p class="d1-names">Jimmie  Harris</p>
@@ -713,6 +714,9 @@
 		<div id="g-ai0-33" class="g-deaths absolute" style="top:88.5995%;right:76.8958%;width:4.4271%;">
 			<p class="g-pstyle6">Andreas Garnica </p>
 		</div>
+		<div id="g-ai0-2" class="g-deaths absolute" style="top:89.38%;right:76.4%;width:4.4271%;">
+			<p class="g-pstyle1">Matthew D. Haines</p>
+		</div>
 		<div id="g-ai0-34" class="g-deaths absolute" style="top:89.1782%;left:75.9134%;width:4.0799%;">
 			<p class="g-pstyle7">Aaron Ratinoff </p>
 		</div>
@@ -730,14 +734,21 @@
 		<div id="g-ai0-39" class="g-deaths absolute" style="top:90.9144%;right:73.3079%;width:5.1215%;">
 			<p class="g-pstyle8">Dennis Ray Jackson </p>
 		</div>
-		<div id="g-ai0-40" class="g-deaths absolute" style="top:91.4641%;left:72.065%;width:3.8194%;">
-			<p class="g-pstyle7">Jose Solorzano  </p>
+		<div id="g-ai0-40" class="g-deaths absolute tooltipRT" style="top:91.4641%;left:72.065%;width:3.8194%;">
+			<p class="g-pstyle7">Jose Solorzano</p>
+			<span class='tooltiptextRT'>Jose Solorzano, a 25-year-old Latino, was shot and killed Friday, May 1, 1992, in East Hollywood. Solorzano was shot by a security guard while looting at a store at Vermont Avenue and Santa Monica Boulevard.</span>
 		</div>
-		<div id="tranh-lam" class="g-deaths absolute" style="top:91.6956%;right:72.8706%;">
+		<div id="tranh-lam" class="g-deaths absolute tooltip" style="top:91.6956%;right:72.8706%;">
 			<p class="g-pstyle8 tranh">Tranh Lam</p>
+			<span class='tooltiptext'>Thanh Lam, a 25-year-old Asian man, was shot and killed Thursday, April 30, 1992, in Compton.
+			Lam was leaving his family's market in Compton, which had been looted and burned the night before. The traffic signal at Willowbrook Avenue and Alondra Boulevard had turned yellow, and Lam slowed to a stop.<br>
+			A car bumped him from the rear and pulled up in the next lane. At least two gunmen leaned out with handguns and began firing. One bullet shattered the truck's window; a volley of shots ripped into the cab.<br>
+			Four bullets hit Lam, and within minutes he was dead.
+</span>
 		</div>
-		<div id="edward-song-lee" class="g-deaths absolute" style="top:92.5347%;right:71.3131%">
+		<div id="edward-song-lee" class="g-deaths absolute tooltip" style="top:92.5347%;right:71.3131%;">
 			<p class="d2-names edward">Edward Song Lee </p>
+			<span class='tooltiptext'>Edward Song Lee, an 18-year-old Asian man, was shot and killed Thursday, April 30, 1992, in Koreatown. Lee, a Korean American, was attempting to protect shops near 3rd Street and Hobart Boulevard when he was apparently shot by fellow Korean Americans who mistook him for a looter.</span>
 		</div>
 		<div id="g-ai0-43" class="g-deaths absolute" style="top:92.8819%;left:69.3319%;width:4.6586%;">
 			<p class="g-pstyle9">Elbert O. Wilkins </p>
@@ -779,9 +790,8 @@
 			<p class="g-pstyle6">Juanita Pettaway</p>
 		</div>
 
-		<div id="g-ai0-158" class="g-deaths absolute tooltip" style="top:98.1157%;margin-top:-34.9px;left:48.3334%;width:137px;">
+		<div id="g-ai0-158" class="absolute" style="top:98.1157%;margin-top:-34.9px;left:48.3334%;width:137px;">
 			<p class="g-pstyle30">Deaths</p>
-			<span class='tooltiptext'>testing</span>
 		</div>
 
 		<div id="g-ai0-161" class="g-source absolute" style="top:98.0324%;left:80.9319%;width:18.5764%;">
@@ -1170,7 +1180,8 @@ d3.selectAll('.g-deaths') //hover effect for all names
 	.on('mouseover',function() {
 		console.log(d3.select('p.d1-names'))
 		d3.select(this)
-			.style('color', 'white');
+			.style('color', 'white')
+			.style('transition', 'all 3s');
 			// tip.show
 		});
 			
@@ -1178,7 +1189,7 @@ d3.selectAll('.g-deaths') //hover effect for all names
 	.on('mouseout', function() {
 		d3.select(this)
 			.style('color', 'rgb(0,134,255)')
-			.style('opacity', '0.75');
+			// .style('opacity', '1');
 		});
 
 		
