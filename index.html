@@ -35,25 +35,21 @@
     </div>
 </div>
 
-	<!--<div id="imageTest" class="imageContainer" style="top: 1257px;left: 1257px; width: 500px; height: 500px;"></div>-->
-	<!--<div id='caption' class="imageContainer" style="top: 1760px;left: 1257px; width: 500px; height: 100px;"-->
+<!--CIRCLES-->
 	<div id="dayOneCircle" style="top: 1257px;left: 1257px;"></div>
 	<div id="dayTwoCircle" style="top: 983px;left: 983px;"></div>
 	<div id="dayThreeCircle" style="top: 685px;left: 685px;"></div>
 	<div id="dayFourCircle" style="top: 388px;left: 388px;"></div>
 	<div id="dayFiveCircle" style="top: 100px;left: 100px;"></div>
-	
+	<div id="resetCircle" style="top: 1625px;left: 1625px;"></div>
+
+<!--MAIN-->
 <div class="wrapper">
 	<!-- Background -->
 	<div id="background" class="artboard" height='3456' width="3456">
-		<!--<canvas height='3456' width='3456'>-->
 		<img class="background" src="background.png"/>
-		<!--<img class="absolute" style="top:50%;left:50%;width:19.8206%;" src="edward.svg" />-->
-		<!--<div class='sprite' style='position: inherit'></div>-->
 		<!--<img class="background" src="guidelines-01.png"/>-->
-		
-		
-		
+
 		<!--Title Section-->
 		<div class="absolute" style="top:2.4595%;left:2.6532%;width:19.8206%;">
 			<p class="title">The 1992 Los Angeles Riots</p>
@@ -1158,6 +1154,17 @@ d3.select('#dayFiveCircle') //select dayFive records
 // 		dayFour.style('opacity', '1');
 // 		dayTwo.style('opacity', '1');
 // 	});
+
+d3.select('#resetCircle') //resets all circles
+	.on('click', function() {
+		console.log('reset works');
+		dayOne.style('opacity', '1');
+		dayTwo.style('opacity', '1');
+		dayThree.style('opacity', '1');
+		dayFour.style('opacity', '1');
+		dayFive.style('opacity', '1');
+		dayOneImages.style('visibility', 'visible'); //brings up images
+	});
 
 d3.selectAll('.g-deaths') //hover effect for all names
 	.on('mouseover',function() {

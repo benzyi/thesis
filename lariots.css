@@ -188,6 +188,15 @@ p {
 	position: absolute;
 	z-index: 1;
 }
+
+#resetCircle {
+	background-color: transparent;
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	position: absolute;
+	z-index: 6;
+}
 /*CIRCLES FOR CLICKING END*/
 
 .sunday-time {
