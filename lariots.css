@@ -73,6 +73,7 @@ p {
 	color:rgb(170,13,0);
 	z-index: 7;
 	line-height: 20px
+	
 }
 
 .title {
@@ -260,11 +261,35 @@ p {
 	color:rgb(0,134,255);
 }
 .d1-names {
-	/*color:rgb(0,134,255);*/
+	color:rgb(0,134,255);
 	opacity: 1;
+	font-family: "adobe-caslon-pro", serif ;
+	font-style: normal;
+	font-weight: 500;
 }
 .d2-names {
-	color:rgb(0,134,255);
+	color:rgb(0,113,198);
+	font-family: "adobe-caslon-pro", serif ;
+	font-style: normal;
+	font-weight: 500;
+}
+.d3-names {
+	color:rgb(4,96,153);
+	font-family: "adobe-caslon-pro", serif ;
+	font-style: normal;
+	font-weight: 500;
+}
+.d4-names {
+	color:rgb(3,68,109);
+	font-family: "adobe-caslon-pro", serif ;
+	font-style: normal;
+	font-weight: 500;
+}
+.d5-names {
+	color:rgb(1,53,76);
+	font-family: "adobe-caslon-pro", serif ;
+	font-style: normal;
+	font-weight: 500;
 }
 .g-pstyle17 {
 	height:17px;
