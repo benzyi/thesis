@@ -6,7 +6,7 @@
     <!--<script src="lariots.js"></script>-->
     <link rel="stylesheet" href="lariots.css">
     <script src="d3-tip.js"></script>
-    <script src="jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<style type='text/css' media='screen,print'>
 	@import url('https://use.typekit.net/fyi0asp.css');
 	</style>
@@ -744,7 +744,7 @@
 			Four bullets hit Lam, and within minutes he was dead.
 </span>
 		</div>
-		<div id="edward-song-lee" class="g-deaths absolute tooltip" style="top:92.5347%;right:71.3131%;">
+		<div id="edward-song-lee" class="g-deaths absolute tooltip" d-orignal="top:92.5347%;right:71.3131%;" style="top:92.5347%;right:71.3131%;">
 			<p class="d2-names edward">Edward Song Lee </p>
 			<span class='tooltiptext'>Edward Song Lee, an 18-year-old Asian man, was shot and killed Thursday, April 30, 1992, in Koreatown. Lee, a Korean American, was attempting to protect shops near 3rd Street and Hobart Boulevard when he was apparently shot by fellow Korean Americans who mistook him for a looter.</span>
 		</div>
@@ -795,14 +795,10 @@
 		<div id="g-ai0-161" class="g-source absolute" style="top:98.0324%;left:80.9319%;width:18.5764%;">
 			<p class="g-pstyle32">Sources: Los Angeles Times Staff, &ldquo;Charting the Hours of Chaos,&rdquo; <span class="g-cstyle3">LA Times</span>, Los Angeles, CA, April 29, 2002; Los Angeles Times Staff, &ldquo;Deaths during the L.A. riots,&rdquo; <span class="g-cstyle3">LA Times</span>,  Los Angeles, CA, April 25, 2012; Wikipedia, <span class="g-cstyle3">1992 Los Angeles Riots, </span>accessed October 22, 2017.</p>
 		</div>
-		<!--<div class="tooltip absolute" style="top:50.0324%;left:50.9319%;width:18.5764%;">Hover over me-->
-  <!--<span class="tooltiptext">Tooltip text</span>-->
-<!--</div>-->
 		
 	</div>
 	
 </div>
-<!--</canvas> -->
 
 <script>
 var dayOne = d3.selectAll('.dayOne');
@@ -816,13 +812,21 @@ var dayOneImages = d3.selectAll('.dayOneImages');
 var edward = d3.selectAll('p.edward');
 var tranh = d3.selectAll('#tranh-lam p.tranh');
 
-// d3.selectAll('.st0') //trying to make the svg interactive
-// 	.on('mouseover', function() {
-// 		console.log(d3.select(this));
-// 		d3.select(this)
-// 			.style('color', 'white');
-// 	});
+// AUCHERS EXPERIMENTS
+let names = d3.selectAll('.g-deaths')
+var arr = names.nodes(); //nodes() turns the htmlcollection into an array
+
+arr.map(function(x){  //separates out the array
+	let el = d3.select(x) //select individually
 	
+	// get the style attribute of each x
+	let style = el.attr('style')
+	
+	// save that attribute to d-original to each x
+	el.attr('d-original', style)
+	
+	// console.log(el)
+})
 	
 	
 //trying to make this whole thing zoomable. need to add canvas for it to work, but only the dots zoom. can't get all my stuff to zoom.
@@ -878,199 +882,49 @@ var tranh = d3.selectAll('#tranh-lam p.tranh');
 // didnt work
 
 //START OF NAME POSITIONING TO ORIGINAL POSITION
-var button = document.getElementById("edward-song-lee");
-// var buttonColor = document.getElementById("edward-song-lee").getElementsByClassName("edward"); //attempt at keeping original color
-var button2 = document. getElementById("tranh-lam");
-// var button = document.getElementsByClassName("g-deaths");
 
 var status = "original";
-
 var originalTop, originalRight; //var to be filled later. currently a placeholder.
 // var originalColor; //attempt at keeping original color
-var nameAtTheCenter = new Boolean(0); //trying to make this a boolean
-var theNameAtCenter = d3.select(this)
+// var nameAtTheCenter = new Boolean(0); //trying to make this a boolean
+// var theNameAtCenter = d3.select(this);
+
 //nameAtTheCenter (boolean) 
 //whichIsThatNameAtCenter (string by elementID d3.select(#)
 
-// button.onclick = function () { //TESTING TO SCALE -- DIDNT WORK
-//     switch (status) {
-//         case "topRightCorner":
-        	
-//         	if (nameAtTheCenter = 1) {
-//         		d3.select(theNameAtCenter)
-//         			.attr('style', originalTop)
-//         			.attr('style', originalRight)
-//         		nameAtTheCenter = 0
-//         	}
-        	
-//         	else if (nameAtTheCenter = 0) {
-//         		document.getElementById(this)
-//         		button.style.top="42%";
-// 	            button.style.right="46%";
-// 	            button.style.transition="all 3s";
-// 	            // button.style.font-size="50px"; //does not work
-// 	            button.style.position="absolute";
-// 	            status = "original";
-// 	            nameAtTheCenter = 1;
-// 	            break;
-//         	}
-//         	// if(nameatcenter = 1)
-//         	// 	select this whichIStHanNameatCenter = apply the OroginalTop andRight to that
-//         	// 	nameatcenter = 0
-        		
-//         	// if (name at center = 0)
-//         	// now, current click name, get that ID form the previous this, as soon as you had clicked it. that was stored.
-//         	// 	select this justClicked = apply the css changes to center.
-//         	// 	nameatcenter = 1
-
-//         	originalTop = button.style.top;
-//         	originalRight = button.style.right;
-//         	console.log(originalTop);
-            
-//         case "original":
-//         	console.log(button.style.top);
-//             // button.style.top="" = "absolute";
-//             button.style.top = originalTop;
-//             button.style.right = originalRight;
-//             status = "topRightCorner";
-//             break;
-//     }
-// };
-
-//ORIGINAL POSITIONER THAT WORKS FOR EDWARD
-button.onclick = function () {
+names.on('click', function() {
+	let button = d3.select(this)
+	console.log("button", button)
+	var originalStyle = this.getAttribute("d-original");
+	console.log(originalStyle);
     switch (status) {
-        case "topRightCorner":
-			
-			originalTop = button.style.top;
-        	originalRight = button.style.right;
-        	// originalColor = buttonColor.style.color; //attempt at keeping original color
-        	// console.log(originalTop);
+        case "center":
+			console.log(button)
+        	button.style('top', '42%');
         	
-    		button.style.top="42%";
-            button.style.right="46%";
-            button.style.transition="all 3s";
-            button.style.fontSize="50px";
-            button.style.position="absolute";
+        	// if button.style contains left, then do button.style('left', '54%')
+        	// else button.style('right', '46%')
+        	
+        	button.style('right', '46%');
+        	button.style('width', '')
+            button.style('transition', 'all 3s');
+            button.style('font-size', '50px');
+
             // buttonColor.style.color="blue"; //attempt at keeping original color
             status = "original";
             // nameAtTheCenter = 0;
             break;
 
         case "original":
-        	// console.log(button.style.top);
-            // nameAtTheCenter = 0;
-            button.style.top = originalTop;
-            button.style.right = originalRight;
-            button.style.fontSize = "20px";
+            button.attr('style', originalStyle);
+            button.style('transition', 'all 3s');
             // buttonColor.style.color = originalColor; //attempt at keeping original color
-            status = "topRightCorner";
+            status = "center";
             // nameAtTheCenter = 1;
             break;
     }
-};
+});
 
-// if (nameAtTheCenter = 1) { //does not work
-// 	button.onclick = function () {
-// 		nameAtTheCenter = 0;
-// 		console.log(nameAtTheCenter);
-// 	};
-// }
-
-// else if (nameAtTheCenter = 0) {
-// 	button.onclick = function () {
-// 		nameAtTheCenter = 1;
-// 		console.log(nameAtTheCenter);
-// 	};
-// }
-
-// if (nameAtTheCenter = 0) { // also does not work
-// 	button.onclick = function () {
-// 		switch(status) {
-// 			case "nameIsThere":
-// 				nameAtTheCenter = 1;
-// 				console.log(nameAtTheCenter);
-// 				break;
-			
-// 			case "nameNotThere":
-// 				nameAtTheCenter = 0;
-// 				console.log(nameAtTheCenter);
-// 				break;
-// 		}
-// 	}
-// }
-
-// else (nameAtTheCenter = 1);
-
-//ORIGINAL POSITIONER THAT WORKS FOR TRANH
-button2.onclick = function () {
-    switch (status) {
-        case "topRightCorner":
-			
-			originalTop = button2.style.top;
-        	originalRight = button2.style.right;
-        	console.log(originalTop);
-        	
-    		button2.style.top="42%";
-            button2.style.right="46%";
-            button2.style.transition="all 3s";
-            button2.style.fontSize="50px";
-            button2.style.position="absolute";
-            status = "original";
-            // nameAtTheCenter = 1;
-            break;
-
-        	
-            
-        case "original":
-        	console.log(button2.style.top);
-            // button.style.top="" = "absolute";
-            button2.style.top = originalTop;
-            button2.style.right = originalRight;
-            button2.style.fontSize = "20px";
-            status = "topRightCorner";
-            break;
-    }
-};
-
-// TRYING OUT WHAT DANIEL SUGGESTED TO MOVE NAMES
-// THIS CODE (MINUS THE NEW STUFF I TRIED) WORKS TO MOVE NAMES TO CENTER BUT NOT BACK
-
-// d3.selectAll('div') // attempt at moving the position back
-// 	.attr('original', d3.select(this).attr('style'));
-// 	console.log('original');
-
-// let moved = false;
-
-// // where would this go?
-// 		g-deaths.setMoved(moved);
-//     	moved = !moved;
-	
-// d3.selectAll('.g-deaths') //moves names to center and increases font size
-	// .each(function (d,i) {
-		// d3.select(this)
-			// .attr('style', function(d, i) { return 'top:' + (Math.floor(i/10)*10) + '%; right:' + (i%20) + '%';})
-			// .on('click', function () {
-				// if (moved == 'true') { //moved is a boolean that needs to be made
-				// 	//original position
-				// 	d3.select(this)
-				// 		.attr('style', 'original')
-				// }
-				// else {
-					
-				
-				// console.log(d3.select(this))
-				// d3.select(this)
-				// 	.attr('style', function(d,i) {
-				// 		// return 'top: 42%; right: 46%;';
-				// 	})
-				// 	.style('transition', 'all 3s')
-				// 	.style('text-align', 'center')
-				// 	.style('font-size', '50px');
-				// }
-			// });
-		// FIXED font-size was getting overridden by the css of p and if not that, p-style. both need to be overridden without having to manually put each font size in the styles of the the html line	
-		// });
 		
 d3.select('#dayOneCircle') //select dayOne records
 	.on('click', function() {
@@ -1083,15 +937,6 @@ d3.select('#dayOneCircle') //select dayOne records
 		dayOneImages.style('visibility', 'visible'); //brings up images
 	});
 	
-// d3.select('#dayOneCircle') //de-select dayOne records
-// 	.on('mouseout', function() {
-// 		dayTwo.style('opacity', '1');
-// 		dayThree.style('opacity', '1');
-// 		dayFour.style('opacity', '1');
-// 		dayFive.style('opacity', '1');
-// 	}); 
-//removing mouseout after adding images
-	
 d3.select('#dayTwoCircle') //select dayTwo records
 	.on('click', function() {
 		console.log('circle 2 works');
@@ -1102,14 +947,6 @@ d3.select('#dayTwoCircle') //select dayTwo records
 		dayFive.style('opacity', '0.2');
 		dayOneImages.style('visibility', 'hidden'); //hides dayOneImages
 	});
-	
-// d3.select('#dayTwoCircle') //de-select dayTwo records
-// 	.on('mouseout', function() {
-// 		dayOne.style('opacity', '1');
-// 		dayThree.style('opacity', '1');
-// 		dayFour.style('opacity', '1');
-// 		dayFive.style('opacity', '1');
-// 	});
 	
 d3.select('#dayThreeCircle') //select dayThree records
 	.on('click', function() {
@@ -1122,14 +959,6 @@ d3.select('#dayThreeCircle') //select dayThree records
 		dayOneImages.style('visibility', 'hidden');
 	});
 	
-// d3.select('#dayThreeCircle') //de-select dayThree records
-// 	.on('mouseout', function() {
-// 		dayOne.style('opacity', '1');
-// 		dayTwo.style('opacity', '1');
-// 		dayFour.style('opacity', '1');
-// 		dayFive.style('opacity', '1');
-// 	});
-	
 d3.select('#dayFourCircle') //select dayFour records
 	.on('click', function() {
 		console.log('circle 2 works');
@@ -1141,14 +970,6 @@ d3.select('#dayFourCircle') //select dayFour records
 		dayOneImages.style('visibility', 'hidden');
 	});
 	
-// d3.select('#dayFourCircle') //de-select dayFour records
-// 	.on('mouseout', function() {
-// 		dayOne.style('opacity', '1');
-// 		dayThree.style('opacity', '1');
-// 		dayTwo.style('opacity', '1');
-// 		dayFive.style('opacity', '1');
-// 	});
-	
 d3.select('#dayFiveCircle') //select dayFive records
 	.on('click', function() {
 		console.log('circle 2 works');
@@ -1159,14 +980,6 @@ d3.select('#dayFiveCircle') //select dayFive records
 		dayFive.style('opacity', '1');
 		dayOneImages.style('visibility', 'hidden');
 	});
-	
-// d3.select('#dayFiveCircle') //de-select dayFive records
-// 	.on('mouseout', function() {
-// 		dayOne.style('opacity', '1');
-// 		dayThree.style('opacity', '1');
-// 		dayFour.style('opacity', '1');
-// 		dayTwo.style('opacity', '1');
-// 	});
 
 d3.select('#resetCircle') //resets all circles
 	.on('click', function() {
@@ -1221,11 +1034,6 @@ tranh.on('mouseover', function() { //hover effect for tranh
     	.attr('style', function(d,i) {
 			return 'color: blue';
 		});
-		
-	// d3.select('#tranh-lam p.d2-names') //increase font size for tranh?
-	// 	.attr('style', function(d,i) {
-	// 		return 'font-size: 50px';
-	// 	});
     });
 
 tranh.on('click', function() { //click to turn text back to black for tranh
