@@ -45,7 +45,18 @@ body { margin:0;position:absolute;top:0;right:0;bottom:0;left:0; }
 	background: transparent;
 }
 
+.g-polygon-title {
+	shape-outside: polygon(100% 38%, 70% 53%, 33% 73%, 4% 100%, 100% 100%);
+	clip-path: polygon(100% 38%, 70% 53%, 33% 73%, 4% 100%, 100% 100%);
+	float: right;
+	background: transparent;
+}
 /*polygons for alignment END*/
+
+svg.edwardlee {
+	position: absolute;
+	visibility: hidden;
+}
 
 #background {
 	position:relative;
@@ -139,6 +150,8 @@ p {
     z-index: 6;
 }
 /*FLEXBOX END*/
+
+
 
 /*CIRCLES FOR CLICKING*/
 #dayOneCircle {
