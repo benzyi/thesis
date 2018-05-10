@@ -35,8 +35,6 @@
     </div>
 </div>
 
-<!--IMAGES-->
-<!--<pop id="edwardlee" class="edwardlee absolute" src="http://placehold.it/300x300" style="top:50%;right:50%;"></pop>-->
 
 <!--CIRCLES-->
 	<div id="dayOneCircle" style="top: 1257px;left: 1257px;"></div>
@@ -65,6 +63,17 @@
 			<p>&nbsp;</p>
 			<p class="summary">This graphic takes a look at the hour-by-hour rundown of the chaos and action taken as detailed by the Los Angeles Times&rsquo; 2002 article titled &ldquo;Charting the Hours of Chaos.&rdquo; The events have been aligned to the hour of the day it took place, while the day of the event has been mapped starting from the inner circle moving outwards to show the progression of days. The red circle indicates violence occuring over 24 hours with 12 hours representing one full cycle. Darker red means two 12-hour cycles.</p>
 		</div>
+		
+		<!--IMAGES-->
+	<div class='edwardimg absolute' style="top:33%;right:61%;">
+		<img class="edwardlee" src="./images/edward-death.jpg" />
+		<div class='edcaption'>Edward Song Lee, 18, foreground, was shot to death and three other Koreans were injured in an exchange of gunfire with looters at 3rd Street and Hobart Boulevard in Koreatown on April 30, 1992. Police questioned the survivors of the attack who were shot while trying to protect a Korean-owned pizza parlor.<br><i>(Hyungwon Kang / Los Angeles Times)</i></div>
+	</div>
+	
+	<div class='edwardimg absolute' style="top:23%; right: 61%;">
+		<img class='edwardlee' src='./images/koreanmarch.jpg' />
+		<div class='edcaption'>A young man carries a framed photo of Eddie Song Lee, the lone Korean American casualty of the riots.<br><i>(Pacific Ties/Kore file)</i></div>
+	</div>
 		
 		<!--Time-->
 		
@@ -1110,6 +1119,7 @@ names.on('click', function() {
 	// let lines = d3.select('svg.edwardlee')
 	let records = d3.selectAll('p.edward')
 	let allP = d3.selectAll('p')
+	let edImage = d3.selectAll('.edwardimg')
 	// console.log("button", button)
 	var originalStyle = this.getAttribute("d-original");
 	// console.log(originalStyle);
@@ -1131,6 +1141,7 @@ names.on('click', function() {
             button.style('transition', 'all 3s');
             // lines.transition().duration(3500).style('visibility', 'hidden'); //edward-specific. needs to be a longer delay than the on.click function below
             allP.style('opacity', '1');
+            edImage.transition().delay(3001).style('visibility', 'hidden'); //has to be later than the click delay because it reappears after 3000 on click below
             // records.style('color', null) //this removes the added color only
             // buttonColor.style.color = originalColor; //attempt at keeping original color
             status = "center";
@@ -1276,9 +1287,9 @@ d3.selectAll('.d5-names') //hover effect for all names
 edward.on('click', function () {
 	let lines = d3.select('svg.edwardlee')
 	let records = d3.selectAll('p.edward')
+	let photo = d3.selectAll('.edwardimg')
         // lines.transition().delay(3000).style('visibility', 'visible'); //edward-specific
     	records.transition().delay(3000).style('opacity', '1'); //edward-specific
-    let photo = d3.selectAll('img.edward')
     	photo.transition().delay(3000).style('visibility', 'visible');
 });
 

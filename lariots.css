@@ -149,13 +149,26 @@ p {
 }
 /*FLEXBOX END*/
 
-/*pop #edwardlee {*/
-/*	z-index: 6;*/
-/*	position: absolute;*/
-/*	display: block;*/
-/*	visibility: visible;*/
-/*}*/
+.edwardimg {
+	z-index: 6;
+	position: absolute;
+	display: block;
+	visibility: hidden;
+}
 
+.edwardimg img {
+	/*min-height: 400px;*/
+	max-width: 400px;
+}
+
+.edcaption {
+	max-width: 390px;
+	min-width: 390px;
+	padding: 5px;
+	background-color: white;
+	font-family: 'proxima-soft-condensed';
+	font-weight: 400;
+}
 
 /*CIRCLES FOR CLICKING*/
 #dayOneCircle {
