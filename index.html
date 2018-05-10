@@ -17,24 +17,26 @@
 <div class="flex-container images dayOneImages" style="visibility: hidden">
     <div class="flex-item">
         <figure>
-            <img id="test" src="http://placehold.it/300x300" style="width: 300px; height: 300px;" />
+            <img id="test" src="http://placehold.it/300x300" />
             <figcaption id="test" class="caption" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis congue ex. Fusce facilisis tellus nisi, sed molestie sem suscipit vel. Integer suscipit enim ut volutpat consequat. Curabitur sed rutrum sem, at porta enim. Duis accumsan elementum ornare. Nunc convallis velit venenatis erat sagittis, id maximus turpis cursus.</figcaption>
         </figure>
     </div>
     <div class="flex-item">
         <figure>
-            <img id='testA' src="http://placehold.it/300x300" style="width: 300px; height: 300px;" />
+            <img id='testA'  class="edward" src="http://placehold.it/300x300" />
             <figcaption id="testA" class="caption" style="display: none;">A building</figcaption>
         </figure>
     </div>
     <div class="flex-item">
         <figure>
-            <img id='something' src="http://placehold.it/300x300" style="width: 300px; height: 300px;" />
-            <figcaption id="something" class="caption" style="display: none;">The campus.</figcaption>
+            <img id='something' src="http://placehold.it/300x300" />
+            <figcaption id="something" class="caption" style="display: none">The campus.</figcaption>
         </figure>
     </div>
 </div>
 
+<!--IMAGES-->
+<!--<pop id="edwardlee" class="edwardlee absolute" src="http://placehold.it/300x300" style="top:50%;right:50%;"></pop>-->
 
 <!--CIRCLES-->
 	<div id="dayOneCircle" style="top: 1257px;left: 1257px;"></div>
@@ -653,7 +655,7 @@
 			<span class='tooltiptext'>Willie Bernard Williams, a 29-year-old black man, died Wednesday, April 29, 1992, in Chesterfield Square. Williams was thrown from a truck in an accident at Gage and Western avenues in which traffic signals had failed.</span>
 		</div>
 		
-		<div id="tranh-lam" class="g-deaths absolute tooltip" style="top:91.6956%;right:72.8706%;">
+		<div id="tranh-lam" class="g-deaths absolute tooltip" style="top:91.6956%;right:72.4%;">
 			<p class="d2-names tranh">Tranh Lam</p>
 			<span class='tooltiptext'>Thanh Lam, a 25-year-old Asian man, was shot and killed Thursday, April 30, 1992, in Compton.
 			Lam was leaving his family's market in Compton, which had been looted and burned the night before. The traffic signal at Willowbrook Avenue and Alondra Boulevard had turned yellow, and Lam slowed to a stop.<br>
@@ -1029,7 +1031,7 @@ var dayOneImages = d3.selectAll('.dayOneImages');
 var edward = d3.selectAll('p.edward');
 var tranh = d3.selectAll('#tranh-lam p.tranh');
 
-// AUCHERS EXPERIMENTS
+// ORIGINAL POSITION CREATOR
 let names = d3.selectAll('.g-deaths')
 var arr = names.nodes(); //nodes() turns the htmlcollection into an array
 
@@ -1045,7 +1047,7 @@ arr.map(function(x){  //separates out the array
 	// console.log(el)
 })
 	
-	
+//ZOOM ATTEMPT
 //trying to make this whole thing zoomable. need to add canvas for it to work, but only the dots zoom. can't get all my stuff to zoom.
 // var test = d3.selectAll(".wrapper")
 // 	.call(d3.zoom()
@@ -1103,21 +1105,17 @@ arr.map(function(x){  //separates out the array
 var status = "original";
 var originalTop, originalRight; //var to be filled later. currently a placeholder.
 
-
-//nameAtTheCenter (boolean) 
-//whichIsThatNameAtCenter (string by elementID d3.select(#)
-
 names.on('click', function() {
 	let button = d3.select(this)
-	let lines = d3.select('svg.edwardlee')
+	// let lines = d3.select('svg.edwardlee')
 	let records = d3.selectAll('p.edward')
 	let allP = d3.selectAll('p')
-	console.log("button", button)
+	// console.log("button", button)
 	var originalStyle = this.getAttribute("d-original");
-	console.log(originalStyle);
+	// console.log(originalStyle);
     switch (status) {
         case "center":
-			console.log(button)
+			// console.log(button)
         	button.style('top', '42%');
         	allP.style('opacity', '0.2');
         	button.style('right', '45%');
@@ -1131,7 +1129,7 @@ names.on('click', function() {
         case "original":
             button.attr('style', originalStyle);
             button.style('transition', 'all 3s');
-            lines.transition().delay(3500).style('visibility', 'hidden'); //edward-specific. needs to be a longer delay than the on.click function below
+            // lines.transition().duration(3500).style('visibility', 'hidden'); //edward-specific. needs to be a longer delay than the on.click function below
             allP.style('opacity', '1');
             // records.style('color', null) //this removes the added color only
             // buttonColor.style.color = originalColor; //attempt at keeping original color
@@ -1140,10 +1138,10 @@ names.on('click', function() {
     }
 });
 
-		
+// START CIRCLES 	
 d3.select('#dayOneCircle') //select dayOne records
 	.on('click', function() {
-		console.log('circle works');
+		// console.log('circle works');
 		dayOne.style('opacity', '1');
 		dayTwo.style('opacity', '0.2');
 		dayThree.style('opacity', '0.2');
@@ -1154,7 +1152,7 @@ d3.select('#dayOneCircle') //select dayOne records
 	
 d3.select('#dayTwoCircle') //select dayTwo records
 	.on('click', function() {
-		console.log('circle 2 works');
+		// console.log('circle 2 works');
 		dayOne.style('opacity', '0.2');
 		dayTwo.style('opacity', '1');
 		dayThree.style('opacity', '0.2');
@@ -1165,7 +1163,7 @@ d3.select('#dayTwoCircle') //select dayTwo records
 	
 d3.select('#dayThreeCircle') //select dayThree records
 	.on('click', function() {
-		console.log('circle 2 works');
+		// console.log('circle 3 works');
 		dayOne.style('opacity', '0.2');
 		dayTwo.style('opacity', '0.2');
 		dayThree.style('opacity', '1');
@@ -1176,7 +1174,7 @@ d3.select('#dayThreeCircle') //select dayThree records
 	
 d3.select('#dayFourCircle') //select dayFour records
 	.on('click', function() {
-		console.log('circle 2 works');
+		// console.log('circle 4 works');
 		dayOne.style('opacity', '0.2');
 		dayTwo.style('opacity', '0.2');
 		dayThree.style('opacity', '0.2');
@@ -1187,7 +1185,7 @@ d3.select('#dayFourCircle') //select dayFour records
 	
 d3.select('#dayFiveCircle') //select dayFive records
 	.on('click', function() {
-		console.log('circle 2 works');
+		// console.log('circle 5 works');
 		dayOne.style('opacity', '0.2');
 		dayTwo.style('opacity', '0.2');
 		dayThree.style('opacity', '0.2');
@@ -1198,7 +1196,7 @@ d3.select('#dayFiveCircle') //select dayFive records
 
 d3.select('#resetCircle') //resets all circles
 	.on('click', function() {
-		console.log('reset works');
+		// console.log('reset works');
 		dayOne.style('opacity', '1');
 		dayTwo.style('opacity', '1');
 		dayThree.style('opacity', '1');
@@ -1207,45 +1205,96 @@ d3.select('#resetCircle') //resets all circles
 		dayOneImages.style('visibility', 'hidden'); //brings up images
 	});
 
-d3.selectAll('.g-deaths') //hover effect for all names
+//START HOVER FOR NAMES
+d3.selectAll('.d1-names') //hover effect for all names
 	.on('mouseover',function() {
-		console.log(d3.select('p.d1-names'))
+		console.log(d3.select(this))
 		d3.select(this)
 			.style('color', 'white')
-			.style('transition', 'all 3s');
-			// tip.show
-		});
-			
-d3.selectAll('.g-deaths') //hover effect for all names
+			.style('transition', 'color 1s');
+		})
 	.on('mouseout', function() {
 		d3.select(this)
-			.style('color', 'rgb(0,134,255)')
-			// .style('opacity', '1');
+			.style('color', null)
+			.style('transition', 'color 1s');
 		});
+		
+d3.selectAll('.d2-names') //hover effect for all names
+	.on('mouseover',function() {
+		console.log(d3.select(this))
+		d3.select(this)
+			.style('color', 'white')
+			.style('transition', 'color 1s');
+		})
+	.on('mouseout', function() {
+		d3.select(this)
+			.style('color', null)
+			.style('transition', 'color 1s');
+		});
+		
+d3.selectAll('.d3-names') //hover effect for all names
+	.on('mouseover',function() {
+		console.log(d3.select(this))
+		d3.select(this)
+			.style('color', 'white')
+			.style('transition', 'color 1s');
+		})
+	.on('mouseout', function() {
+		d3.select(this)
+			.style('color', null)
+			.style('transition', 'color 1s');
+		});
+		
+d3.selectAll('.d4-names') //hover effect for all names
+	.on('mouseover',function() {
+		console.log(d3.select(this))
+		d3.select(this)
+			.style('color', 'white')
+			.style('transition', 'color 1s');
+		})
+	.on('mouseout', function() {
+		d3.select(this)
+			.style('color', null)
+			.style('transition', 'color 1s');
+		});
+		
+d3.selectAll('.d5-names') //hover effect for all names
+	.on('mouseover',function() {
+		console.log(d3.select(this))
+		d3.select(this)
+			.style('color', 'white')
+			.style('transition', 'color 1s');
+		})
+	.on('mouseout', function() {
+		d3.select(this)
+			.style('color', null)
+			.style('transition', 'color 1s');
+		});
+//END NAME HOVERS
 
+//START NAME CLICK FUNCTIONS
 edward.on('click', function () {
 	let lines = d3.select('svg.edwardlee')
 	let records = d3.selectAll('p.edward')
-        lines.transition().delay(3000).style('visibility', 'visible'); //edward-specific
-    	// records.transition().delay(3100).attr('style', 'color: dodgerblue'); //don't need color anymore
+        // lines.transition().delay(3000).style('visibility', 'visible'); //edward-specific
     	records.transition().delay(3000).style('opacity', '1'); //edward-specific
+    let photo = d3.selectAll('img.edward')
+    	photo.transition().delay(3000).style('visibility', 'visible');
 });
 
 tranh.on('click', function () {
 	// let lines = d3.select('svg.edwardlee')
 	let records = d3.selectAll('p.tranh')
-        // lines.transition().delay(3000).style('visibility', 'visible'); //edward-specific
-    	// records.transition().delay(3100).attr('style', 'color: dodgerblue'); //don't need color anymore
-    	records.transition().delay(3000).style('opacity', '1'); //edward-specific
+    	records.transition().delay(3000).style('opacity', '1');
 });
 
 //need to create an onclick for each name. also each name needs id of their name. would be clean to make them each a variable.
-		
+
 
 //FLEXBOX SCRIPT
 d3.selectAll('.flex-item img')
                 .on('mouseover', function (d, i, nodes, currentElement) {
-                    console.log(d3.select('#' + this.id))
+                    // console.log(d3.select('#' + this.id))
                     d3.selectAll('#' + this.id)
                         .attr('style', 'display: block');
                 })
@@ -1258,9 +1307,9 @@ d3.selectAll('.flex-item img')
 
 </script>
 
-<svg class="edwardlee" height="2000" width="2000" style="top:69%;right:4%">
-  <line x1="850" y1="25" x2="1700" y2="500" style="stroke:rgb(0,0,255);stroke-width:2" />
-</svg>
+<!--<svg class="edwardlee" height="2000" width="2000" style="top:69%;right:4%">-->
+<!--  <line x1="850" y1="25" x2="1700" y2="500" style="stroke:rgb(0,0,255);stroke-width:2" />-->
+<!--</svg>-->
 
 </body>
 </html>

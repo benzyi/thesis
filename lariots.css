@@ -118,8 +118,6 @@ p {
 }
 
 .flex-item {
-    /*width: 350px;
-    height: null;*/
     flex-grow: 1;
     flex-basis: auto;
     justify-content: flex-start;
@@ -151,6 +149,12 @@ p {
 }
 /*FLEXBOX END*/
 
+/*pop #edwardlee {*/
+/*	z-index: 6;*/
+/*	position: absolute;*/
+/*	display: block;*/
+/*	visibility: visible;*/
+/*}*/
 
 
 /*CIRCLES FOR CLICKING*/
@@ -411,30 +415,7 @@ p {
 	font-style:italic;
 }
 
-/*.d3-tip {*/
-/*    font-size: 14px;*/
-/*    line-height: 1.25;*/
-/*    text-align: left;*/
-/*    padding: 7px;*/
-/*    background: #00689d;*/
-/*    color: snow;*/
-/*    border-radius: 0px;*/
-/*    width: 350px;*/
-/*}*/
 
-/*.tooltip-inner {*/
-/*     max-width: 400px;*/
-/*     padding: 5px 8px;*/
-/*     color: snow;*/
-/*     text-align: left;*/
-/*     background-color: #00689d;*/
-/*     font-size: 16px;*/
-/* }*/
- 
-/*.tooltip { */
-/*     opacity: 1 !important; */
-/* }*/
- 
  /* Tooltip container */
 .tooltip {
     /*position: relative;*/
@@ -459,6 +440,7 @@ p {
     padding: 5px;
     border-radius: 3px;
     position: absolute;
+    
 }
 
 .tooltip:hover .tooltiptext {
