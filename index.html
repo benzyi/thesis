@@ -13,45 +13,32 @@
 </head>
 
 <body>
-	<!--FLEXBOX-->
-<div class="flex-container images dayOneImages" style="visibility: hidden">
-    <div class="flex-item">
-        <figure>
-            <img id="test" src="http://placehold.it/300x300" />
-            <figcaption id="test" class="caption" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis congue ex. Fusce facilisis tellus nisi, sed molestie sem suscipit vel. Integer suscipit enim ut volutpat consequat. Curabitur sed rutrum sem, at porta enim. Duis accumsan elementum ornare. Nunc convallis velit venenatis erat sagittis, id maximus turpis cursus.</figcaption>
-        </figure>
-    </div>
-    <div class="flex-item">
-        <figure>
-            <img id='testA'  class="edward" src="http://placehold.it/300x300" />
-            <figcaption id="testA" class="caption" style="display: none;">A building</figcaption>
-        </figure>
-    </div>
-    <div class="flex-item">
-        <figure>
-            <img id='something' src="http://placehold.it/300x300" />
-            <figcaption id="something" class="caption" style="display: none">The campus.</figcaption>
-        </figure>
-    </div>
-</div>
+
 
 
 <!--CIRCLES-->
-	<div id="dayOneCircle" style="top: 1257px;left: 1257px;"></div>
-	<div id="dayTwoCircle" style="top: 983px;left: 983px;"></div>
-	<div id="dayThreeCircle" style="top: 685px;left: 685px;"></div>
-	<div id="dayFourCircle" style="top: 388px;left: 388px;"></div>
-	<div id="dayFiveCircle" style="top: 100px;left: 100px;"></div>
-	<div id="resetCircle" style="top: 1625px;left: 1625px;"></div>
+	<!--<div id="dayOneCircle" style="top: 1257px;left: 1257px;"></div>-->
+	<!--<div id="dayTwoCircle" style="top: 983px;left: 983px;"></div>-->
+	<!--<div id="dayThreeCircle" style="top: 685px;left: 685px;"></div>-->
+	<!--<div id="dayFourCircle" style="top: 388px;left: 388px;"></div>-->
+	<!--<div id="dayFiveCircle" style="top: 100px;left: 100px;"></div>-->
+	<!--<div id="resetCircle" style="top: 1625px;left: 1625px;"></div>-->
 
 
 
 <!--MAIN-->
-<div class="wrapper">
+<div id='container' class="wrapper">
 	<!-- Background -->
 	<div id="background" class="artboard" height='3456' width="3456">
 		<img class="background" src="background.png"/>
 		<!--<img class="background" src="guidelines-01.png"/>-->
+		<div id="dayOneCircle" style="top: 1257px;left: 1257px;"></div>
+		<div id="dayTwoCircle" style="top: 983px;left: 983px;"></div>
+		<div id="dayThreeCircle" style="top: 685px;left: 685px;"></div>
+		<div id="dayFourCircle" style="top: 388px;left: 388px;"></div>
+		<div id="dayFiveCircle" style="top: 100px;left: 100px;"></div>
+		<div id="resetCircle" style="top: 1625px;left: 1625px;"></div>
+
 
 		<!--Title Section-->
 		<div class="absolute" style="top:2.4595%;left:2.6532%;width:19.8206%;">
@@ -64,17 +51,186 @@
 			<p class="summary">This graphic takes a look at the hour-by-hour rundown of the chaos and action taken as detailed by the Los Angeles Times&rsquo; 2002 article titled &ldquo;Charting the Hours of Chaos.&rdquo; The events have been aligned to the hour of the day it took place, while the day of the event has been mapped starting from the inner circle moving outwards to show the progression of days. The red circle indicates violence occuring over 24 hours with 12 hours representing one full cycle. Darker red means two 12-hour cycles.</p>
 		</div>
 		
-		<!--IMAGES-->
+<!--FLEXBOX DAYONE-->
+	<!--3PM-->
+<div class="flex-container images dayOneImages absolute" style="top:49.5%;left:63%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id="acquittal" src="./images/dayOne/acquittal.jpg" />
+            <figcaption id="acquittal" class="caption" style="display: none;">Members of the jury that found four Los Angeles police officers not guilty in the Rodney King assault case file aboard a Ventura County Sheriff's Department bus outside the Simi Valley courthouse.<br><i>KNBC-TV</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='acquittal_1' src="./images/dayOne/acquittal_1.jpg" />
+            <figcaption id="acquittal_1" class="caption" style="display: none;">Sgt. Stanley Koon, one of the four acquitted officers, leaves the Simi Valley courthouse immediately following the verdict.<br><i>KNBC-TV</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='simivalley_protest' src="./images/dayOne/simivalley_protest.jpg" />
+            <figcaption id="simivalley_protest" class="caption" style="display: none;">Protestors upset over the verdict in the Rodney King beating trial in Simi Valley, California, demonstrate outside of the Fraternal Order of Police headquarters in Washington D.C. 30 April 1992. The acquittal of four police officers in the beating of King led to widespread anger and rioting. <br><i>Paul J. Richards / PRI</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayOneImages absolute" style="top:49.5%;left:75%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='acquittal_2' src="./images/dayOne/acquittal_2.jpg" />
+            <figcaption id="acquittal_2" class="caption" style="display: none">Laurence Powell, center, and Timothy Wind hug shortly after the verdicts were read in their assault trial. Stacy Koon, back right, looks on. Only one count in the trial did not end in acquittal. The jury could not agree on that count, against Koon. The acquittals come at 3:15 p.m. April 29.<br><i>Unknown Credit</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='acquittal_3' src="./images/dayOne/acquittal_3.jpg" />
+            <figcaption id="acquittal_3" class="caption" style="display: none">Sgt. Stacey C. Koon, Officer Theodore J. Briseno, Officer Timothy E. Wind and Officer Laurence Powell<br><i>AP Photo</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<!--LICENSE WARNING 30 DAYS FROM 5/10/2018-->
+        	<!--ACTUALLY REMOVE BECAUSE IT'S A MAY5 IMAGE-->
+            <img id='simivalley_protest_1' src="./images/dayOne/simivalley_protest_1.jpg" />
+            <figcaption id="simivalley_protest_1" class="caption" style="display: none">Part of a group of about 100 protesters gather outside the East County Courthouse, 05 May 1992 in Simi Valley, to protest the verdict in the trial of the four police officers who were acquitted in the Rodney King case. The 1992 Los Angeles riots, with looting and arson events, erupted 29 April 1992 when a mostly white jury acquitted the four police officers accused in the videotaped beating of black motorist Rodney King, after he fled from police. 52 people were killed during the riots and Rodney King became a reluctant symbol of police brutality. <br><i>HAL GARB/AFP/Getty Images</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+	<!--5PM-->
+<div class="flex-container images dayOneImages absolute" style="top:59.5%;left:49%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <a href="https://www.google.com/maps/@33.9745624,-118.3002684,3a,75y,326.87h,81.12t/data=!3m7!1e1!3m5!1s9Ac-tRDTEea0s-3PZHayhA!2e0!6s%2F%2Fgeo1.ggpht.com%2Fcbk%3Fpanoid%3D9Ac-tRDTEea0s-3PZHayhA%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D121.035545%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192" target="_blank"><img id='fn_4' src="./images/dayOne/fn_7.jpg" /></a>
+            <figcaption id="fn_4" class="caption" style="display: none">A rioter attacks a car on Florence and Normandie avenues.<br><i>Kirk McKoy / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@33.9745624,-118.3002684,3a,75y,101.95h,84.6t/data=!3m6!1e1!3m4!1s9Ac-tRDTEea0s-3PZHayhA!2e0!7i16384!8i8192" target="_blank">
+            <img id='fn_5' src="./images/dayOne/fn_5.jpg" /></a>
+            <figcaption id="fn_5" class="caption" style="display: none">Rioters at Florence and Normandie.<br><i>Kirk McKoy / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+            <img id='fn_2' src="./images/dayOne/fn_2.jpg" />
+            <figcaption id="fn_2" class="caption" style="display: none;">A female motorist stumbles as she gets out of her car, which was pelted with rocks at Florence and Normandie.<br><i>Kirk McKoy / Los Angeles Times</i>
+            <img id='fn_2' src="./images/dayOne/fn_3.jpg" style='width: 50%;' /></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--6PM-->
+<div class="flex-container images dayOneImages absolute" style="top:67%;left:36.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <a href="https://youtu.be/NM8Y6uPH-R4?t=40s" target="_blank"><img id='denny' src="./images/dayOne/denny_2.jpg" /></a>
+            <figcaption id="denny" class="caption" style="display: none">Reginald Denny is pulled from a truck and beaten as the LA riots begin at the intersection of Florence and Normandie.<br><i>KNBC-TV</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0524758,-118.2415686,3a,75y,127.53h,95.06t/data=!3m6!1e1!3m4!1s7-7qMIas_66w6ZG9TO_pxQ!2e0!7i13312!8i6656" target="_blank">
+            <img id='pc_4' src="./images/dayOne/pc_4.jpg" /></a>
+            <figcaption id="pc_4" class="caption" style="display: none">A demonstrator protesting the verdict in the trial of four Los Angeles police officers accused of beating motorist Rodney King holds a placard aloft before a line of police as protesters gathered at Parker Center, the former headquarters of the Los Angeles Police Department.<br><i>Mike Nelson / AFP / Getty Images</i></figcaption>
+        </figure>
+    </div>
+    <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0524758,-118.2415686,3a,75y,76.65h,96.08t/data=!3m6!1e1!3m4!1s7-7qMIas_66w6ZG9TO_pxQ!2e0!7i13312!8i6656" target="_blank">
+            <img id='pc_5' src="./images/dayOne/pc_5.jpg" /></a>
+            <figcaption id="pc_5" class="caption" style="display: none;">Demonstrators protest outside the LAPD headquarters at Parker Center in the wake of the verdict in the Rodney King case.<br><i>Bob Riha Jr / Getty Images</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--9PM-->
+<div class="flex-container images dayOneImages absolute" style="top:42.4%;right:72.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='pc_6' src="./images/dayOne/pc_6.jpg" />
+            <figcaption id="pc_6" class="caption" style="display: none">Police officers form a line as demonstrators make their point about the verdicts in the Rodney King beating trial. The all-white jury’s decision to acquit four Los Angeles police officers sparked days of violent<br><i>OC Register</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+            <img id='pc_3' src="./images/dayOne/pc_3.jpg" />
+            <figcaption id="pc_3" class="caption" style="display: none;">Violent demonstrators overturn and set fire to police car at the Parker Center.<br><i>Unknown Credits</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayOneImages absolute" style="top:42.4%;right:84.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='pc_2' src="./images/dayOne/pc_2.jpg" />
+            <figcaption id="pc_2" class="caption" style="display: none">The early demonstrations in front of Parker Center were relatively peaceful as police faced off against the growing crowd. Once night fell, the group grew more violent.<br><i>Rosemary Kaul / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+        <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0524758,-118.2415686,3a,75y,76.65h,96.08t/data=!3m6!1e1!3m4!1s7-7qMIas_66w6ZG9TO_pxQ!2e0!7i13312!8i6656" target="_blank">
+            <img id='pc_1' src="./images/dayOne/pc_1.jpg" /></a>
+            <figcaption id="pc_1" class="caption" style="display: none;">Violent demonstrators overturn and set fire to a kiosk at the Parker Center.<br><i>Los Angeles Daily News file photo/SCNG)</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--dayTwo Images-->
+<!--1AM-->
+<div class="flex-container images dayTwoImages absolute" style="top:12.4%;right:24.6%;visibility: hidden">
+	<div class="flex-item">
+        <figure>
+            <img id='fire_1' src="./images/dayTwo/fire_1.jpg" />
+            <figcaption id="fire_1" class="caption" style="display: none">Fire fighters put out a fire started overnight<br><i>ABC News</i></figcaption>
+        </figure>
+    </div>
+	<div class="flex-item">
+        <figure>
+            <img id='fire_2' src="./images/dayTwo/fire_2.jpg" />
+            <figcaption id="fire_2" class="caption" style="display: none;">Cornelius Pettus, owner of Payless market, throws a bucket of water on the flames at neighboring business Ace Glass during the first night of the Los Angeles Riots in Los Angeles.<br><i>Hyungwon Kang/Los Angeles Times/Files/Reuters</i></figcaption>
+        </figure>
+    </div>
+</div>
+<div class="flex-container images dayTwoImages absolute" style="top:12.4%;right:36.6%;visibility: hidden">
+    <div class="flex-item">
+        <figure>
+            <img id='aerial_fire_1' src="./images/dayTwo/aerial_fire_1.jpg" />
+            <figcaption id="aerial_fire_1" class="caption" style="display: none">An aerial view of Los Angeles in the early morning after the first day of rioting.<br><i>Credit goes here.</i></figcaption>
+        </figure>
+    </div>
+        <div class="flex-item">
+        <figure>
+        	<a href="https://www.google.com/maps/@34.0524758,-118.2415686,3a,75y,76.65h,96.08t/data=!3m6!1e1!3m4!1s7-7qMIas_66w6ZG9TO_pxQ!2e0!7i13312!8i6656" target="_blank">
+            <img id='aerial_fire_2' src="./images/dayTwo/aerial_fire_2.jpg" /></a>
+            <figcaption id="aerial_fire_2" class="caption" style="display: none;">An aerial view of Los Angeles in the early morning after the first day of rioting.<br><i>Ken Lubas / Los Angeles Times</i></figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--PERSON IMAGES-->
+	<!--EDWARD SONG LEE-->
 	<div class='edwardimg absolute' style="top:33%;right:61%;">
-		<img class="edwardlee" src="./images/edward-death.jpg" />
+		<img src="./images/dayTwo/edward-death.jpg" />
 		<div class='edcaption'>Edward Song Lee, 18, foreground, was shot to death and three other Koreans were injured in an exchange of gunfire with looters at 3rd Street and Hobart Boulevard in Koreatown on April 30, 1992. Police questioned the survivors of the attack who were shot while trying to protect a Korean-owned pizza parlor.<br><i>(Hyungwon Kang / Los Angeles Times)</i></div>
 	</div>
 	
 	<div class='edwardimg absolute' style="top:23%; right: 61%;">
-		<img class='edwardlee' src='./images/koreanmarch.jpg' />
+		<img src='./images/dayTwo/koreanmarch.jpg' />
 		<div class='edcaption'>A young man carries a framed photo of Eddie Song Lee, the lone Korean American casualty of the riots.<br><i>(Pacific Ties/Kore file)</i></div>
 	</div>
-		
+	
+	<div class='edwardimg absolute' style="top:43%; right: 44.5%;">
+		<a href="https://www.google.com/maps/@34.0689839,-118.3054392,3a,37.8y,214.47h,90.37t/data=!3m6!1e1!3m4!1sXFVRKnGt5KQueDiLbqoYpA!2e0!7i16384!8i8192" target="_blank">
+		<img src='./images/people_loc/pizzashop_esl.jpg' /></a>
+		<div class='edcaption'>Location of the pizza shop in Koreatown where Eddie Song Lee was killed.<br><i>Google Maps</i></div>
+	</div>
+	
+	<!--DWIGHT TAYLOR-->
+	<div class='dtaylorimg absolute' style="top:43%; right: 43.5%;">
+		<a href="https://www.google.com/maps/@34.004552,-118.2916108,3a,75y,286.79h,86.88t/data=!3m6!1e1!3m4!1srAmLlSuqVab7-NHFsRdFPQ!2e0!7i16384!8i8192" target="_blank">
+		<img class='dtaylor' src='./images/people_loc/swapmeet_dt.jpg' /></a>
+		<div class='dtaylorcaption'>Location of the swap meet where Dwight Taylor was killed.<br><i>Google Maps</i></div>
+	</div>
 		<!--Time-->
 		
 		<!--12 o clock-->
@@ -207,10 +363,10 @@
 			<div id='g-ai0-38' class="g-1 g-polygon-se" style="width: 124%; height: 485px;"></div>
 			<p class="right-align">More than two dozen officers confront a growing crowd near Florence and Normandie avenues in <span class="g-cstyle1">South Central Los Angeles</span>. Outnumbered, police back off and do not return. The crowd vents its anger on passing motorists.</p>
 		</div>
-		<div id="event dayTwo" class="g-hours absolute " style="top:64.2666%;margin-top:-18.1px;right:41.2%;width:72px;">
+		<div id="event" class="g-hours absolute " style="top:64.2666%;margin-top:-18.1px;right:41.2%;width:72px;">
 			<p class="thursday-time">5:10 p.m.</p>
 		</div>
-		<div id="event" class="g-5 absolute dayTwo" style="top:64.294%;right:40.3991%;width:6.9155%;">
+		<div id="event" class="g-5 absolute dayTwo" style="top:64.294%;right:40.3991%;width:7.4%;">
 			<div id='g-ai0-38' class="g-1 g-polygon-se" style="width: 35%; height: 158px;"></div>
 			<p class="right-align thursday">Wilson holds a news conference, carried live statewide, urging an end to violence and promising enough law enforcement to bring the trouble under control.</p>
 		</div>
@@ -230,7 +386,7 @@
 			<p class="right-align">Police begin arriving at a command post at a bus depot at 54th Street and Arlington Avenue.</p>
 		</div>
 		<div id="event" class="g-6 absolute dayOne" style="top:57.8414%;right:50.0436%;width:5.2373%;">
-			<p class="right-align">Looting and rioting begin in earnest. One of the first targets: Tom's Liquor and Deli at Florence and Normandie. Demonstrators begin torching buildings in South-Central Los Angeles. The first fire call is received about 7:45 p.m.</p>
+			<p class="right-align dtaylor">Looting and rioting begin in earnest. One of the first targets: Tom's Liquor and Deli at Florence and Normandie. Demonstrators begin torching buildings in South-Central Los Angeles. The first fire call is received about 7:45 p.m.</p>
 		</div>
 		<div id="event" class="g-hours absolute dayTwo" style="top:67.3222%;margin-top:-9.7px;right:49.3%;width:108px;">
 			<p class="thursday-time">About 6:30 p.m.</p>
@@ -282,7 +438,7 @@
 			<p class="right-align">Several hundred demonstrators gather outside Parker Center, the police headquarters, in downtown Los Angeles.</p>
 		</div>
 		<div id="event" class="g-hours absolute " style="top:57.569%;margin-top:-9.6px;right:50.0551%;width:79px;">
-			<p class="g-pstyle15">6 to 8 p.m.</p>
+			<p class="g-pstyle15 dtaylor">6 to 8 p.m.</p>
 		</div>
 
 		<!--7 o clock-->
@@ -294,11 +450,11 @@
 			<p class="right-align">Police commanders order all officers to report for duty.</p>
 		</div>
 		<div id="event" class="g-hours absolute " style="top:56.1069%;margin-top:-18.1px;right:53.4471%;width:79px;">
-			<p class="g-pstyle15">7 to 9 p.m.</p>
+			<p class="g-pstyle15 dtaylor">7 to 9 p.m.</p>
 		</div>
 		<div id="event" class="g-7 absolute dayOne" style="top:56.1343%;right:53.5651%;width:7.0023%;">
 			<div id='g-ai0-38' class="g-1 g-polygon-sw" style="width: 16%; height: 84px;"></div>
-			<p class="right-align">Rioting erupts in Inglewood, prompting officials to declare a state of emergency.</p>
+			<p class="right-align dtaylor">Rioting erupts in Inglewood, prompting officials to declare a state of emergency.</p>
 		</div>
 		<div id="event" class="g-hours absolute " style="top:57.9836%;margin-top:-17.9px;right:54.53%;width:96px;">
 			<p class="g-pstyle15">7:30 to 8 p.m.</p>
@@ -475,131 +631,115 @@
 		</div>
 			
 	<!--throughout the day-->
-	<!--throughout day1-->
 	<!--throughout day2-->
-	<!--throughout day3-->
-	<!--throughout day4-->
-	<!--throughout day5-->
-		<div id="g-ai0-43" class="g-hours absolute " style="top:38.2713%;margin-top:-9.7px;left:63.4949%;width:131px;">
+	<div id="g-ai0-51" class="g-hours absolute dayTwo" style="top:38.2713%;margin-top:-9.7px;left:63.4949%;width:131px;">
 			<p class="thursday-time">Throughout the day:</p>
 		</div>
-
-		<div id="g-ai0-45" class="g-throughout_day absolute" style="top:38.5127%;right:31.901%;width:10.1852%;">
-			<p class="g-pstyle14 edward">Thousands loot retail outlets in South-Central Los Angeles, Koreatown, Hollywood, Mid-Wilshire, Watts and Westwood as well as Beverly Hills, Compton, Culver City, Hawthorne, Long Beach, Norwalk and Pomona.</p>
+	<div id="event" class="g-throughout_day absolute dayTwo" style="top:38.5127%;right:31.901%;width:10.1852%;">
+			<p class="g-pstyle14 edward thursday">Thousands loot retail outlets in South-Central Los Angeles, Koreatown, Hollywood, Mid-Wilshire, Watts and Westwood as well as Beverly Hills, Compton, Culver City, Hawthorne, Long Beach, Norwalk and Pomona.</p>
 		</div>
-
-
-		<div id="g-ai0-49" class="g-throughout_day absolute" style="top:40.5093%;right:30.9125%;width:8.6516%;">
-			<p class="g-pstyle14">Professional sports teams cancel games, including the NBA playoff game between the Clippers and the Utah Jazz, and the matchup between the Dodgers and the Philadelphia Phillies.</p>
+	<div id="g-ai0-49" class="g-throughout_day absolute dayTwo" style="top:40.5093%;right:30.9125%;width:8.6516%;">
+			<p class="g-pstyle14 thursday">Professional sports teams cancel games, including the NBA playoff game between the Clippers and the Utah Jazz, and the matchup between the Dodgers and the Philadelphia Phillies.</p>
 		</div>
-
-		<div id="g-ai0-51" class="g-hours absolute " style="top:41.4252%;margin-top:-9.7px;left:74.5764%;width:131px;">
+		<div id="g-ai0-58" class="g-throughout_day absolute dayTwo" style="top:42.5347%;right:30.4541%;width:7.0891%;">
+			<p class="g-pstyle14 thursday">The Los Angeles Unified School District expands its school closure to include every school and child-care center in the district.</p>
+		</div>
+		<div id="g-ai0-64" class="g-throughout_day absolute dayTwo" style="top:44.0683%;right:30.036%;width:6.9444%;">
+			<p class="g-pstyle14 thursday">Cal State Los Angeles, Dominguez Hills and Northridge cancel classes. Final exams are postponed at USC.</p>
+		</div>
+		<div id="g-ai0-71" class="g-throughout_day absolute dayTwo" style="top:45.6019%;right:29.7137%;width:6.8866%;">
+			<p class="g-pstyle14 thursday">Government offices, courthouses, libraries, shopping malls and many businesses are shut down for the day.</p>
+		</div>
+		<div id="g-ai0-80" class="g-throughout_day absolute dayTwo" style="top:47.2222%;right:29.6883%;width:6.3368%;">
+			<p class="g-pstyle14 thursday">Mail service is suspended to 14 ZIP Codes.</p>
+		</div>
+		<div id="g-ai0-83" class="g-throughout_day absolute dayTwo" style="top:47.8299%;right:29.4795%;width:6.9734%;">
+			<p class="g-pstyle14 thursday">A power outage leaves thousands in the dark.</p>
+		</div>
+		<div id="g-ai0-85" class="g-throughout_day absolute dayTwo" style="top:48.4664%;right:29.485%;width:6.9155%;">
+			<p class="g-pstyle14 thursday">Long lines form at supermarkets and gas stations throughout the city as residents, fearing shortages, stock up.</p>
+		</div>
+	<!--throughout day3-->
+	<div id="g-ai0-51" class="g-hours absolute dayThree" style="top:41.4252%;margin-top:-9.7px;left:74.5764%;width:131px;">
 			<p class="friday-time">Throughout the day:</p>
 		</div>
-		<div id="g-ai0-52" class="g-hours absolute " style="top:41.4252%;margin-top:-9.7px;left:83.5107%;width:131px;">
+	<div id="g-ai0-56" class="g-throughout_day absolute dayThree" style="top:41.6956%;right:21.6532%;width:7.61%;">
+			<p class="g-pstyle14 friday">Cleanup efforts begin along heavily hit Vermont Avenue and other areas, including the Mid-City, Mid-Wilshire and Hollywood sections.</p>
+		</div>
+		<div id="g-ai0-61" class="g-throughout_day absolute dayThree" style="top:43.316%;right:21.4094%;width:7.6389%;">
+			<p class="g-pstyle14 friday">In addition to Los Angeles, schools are closed in Beverly Hills, Compton, Inglewood, Long Beach, Lynwood, Paramount and Torrance.</p>
+		</div>
+		<div id="g-ai0-67" class="g-throughout_day absolute dayThree" style="top:44.9074%;right:21.3144%;width:6.4525%;">
+			<p class="g-pstyle14 friday">Colleges and universities remain closed.</p>
+		</div>
+		<div id="g-ai0-70" class="g-throughout_day absolute dayThree" style="top:45.544%;right:20.9608%;width:6.2211%;">
+			<p class="g-pstyle14 friday">Many airlines cancel flights into LAX, and many travelers opt instead to use airports in outlying cities.</p>
+		</div>
+		<div id="g-ai0-78" class="g-throughout_day absolute dayThree" style="top:47.1354%;right:21.0671%;width:7.7546%;">
+			<p class="g-pstyle14 friday">Up to 25,000 residents still are without electricity.</p>
+		</div>
+	<!--throughout day4-->
+	<div id="g-ai0-52" class="g-hours absolute dayFour" style="top:41.4252%;margin-top:-9.7px;left:83.5107%;width:131px;">
 			<p class="saturday-time">Throughout the day:</p>
 		</div>
-		<div id="g-ai0-53" class="g-hours absolute " style="top:41.4252%;margin-top:-9.7px;left:92.7867%;width:104px;">
+	<div id="g-ai0-54" class="g-throughout_day absolute dayFour" style="top:41.6956%;right:12.6061%;width:8.1308%;">
+			<p class="g-pstyle14 saturday">Legions of volunteers armed with grit, gumption and cleaning supplies hit the streets. The effort attracts residents from all races and all segments of the county. People also pitch in to help direct traffic, hand out food and shuttle residents.</p>
+		</div>
+		<div id="g-ai0-65" class="g-throughout_day absolute dayFour" style="top:44.2708%;right:12.5498%;width:7.3206%;">
+			<p class="g-pstyle14 saturday">Authorities report no new major fires and few major riot-related criminal incidents for the first time since the violence erupted Wednesday.</p>
+		</div>
+		<div id="g-ai0-73" class="g-throughout_day absolute dayFour" style="top:45.8912%;right:12.3457%;width:6.6551%;">
+			<p class="g-pstyle14 saturday">County officials close an eight-mile stretch of beach in Venice and Playa del Rey.</p>
+		</div>
+		<div id="g-ai0-77" class="g-throughout_day absolute dayFour" style="top:47.0486%;right:12.2902%;width:6.8866%;">
+			<p class="g-pstyle14 saturday">More than 3,500 National Guard troops are on the streets, with 1,000 more in staging areas. Army and Marine forces remain largely in staging areas.</p>
+		</div>
+	<!--throughout day5-->
+	<div id="g-ai0-53" class="g-hours absolute dayFive" style="top:41.4252%;margin-top:-9.7px;left:92.7867%;width:104px;">
 			<p class="sunday-time">During the day:</p>
 		</div>
-		<div id="g-ai0-54" class="g-throughout_day absolute" style="top:41.6956%;right:12.6061%;width:8.1308%;">
-			<p class="g-pstyle14">Legions of volunteers armed with grit, gumption and cleaning supplies hit the streets. The effort attracts residents from all races and all segments of the county. People also pitch in to help direct traffic, hand out food and shuttle residents.</p>
+	<div id="g-ai0-55" class="g-throughout_day absolute dayFive" style="top:41.6956%;right:4.2728%;width:7.147%;">
+			<p class="g-pstyle14 sunday">Delivering homilies at churches throughout the area, including South-Central, Cardinal Roger M. Mahony urges looters to return stolen merchandise.</p>
 		</div>
-		<div id="g-ai0-55" class="g-throughout_day absolute" style="top:41.6956%;right:4.2728%;width:7.147%;">
-			<p class="g-pstyle14">Delivering homilies at churches throughout the area, including South-Central, Cardinal Roger M. Mahony urges looters to return stolen merchandise.</p>
+		<div id="g-ai0-63" class="g-throughout_day absolute dayFive" style="top:43.7789%;right:4.2103%;width:7.3785%;">
+			<p class="g-pstyle14 sunday">Ueberroth and Wilson take separate tours of riot-damaged sections of Los Angeles County.</p>
 		</div>
-		<div id="g-ai0-56" class="g-throughout_day absolute" style="top:41.6956%;right:21.6532%;width:7.61%;">
-			<p class="g-pstyle14">Cleanup efforts begin along heavily hit Vermont Avenue and other areas, including the Mid-City, Mid-Wilshire and Hollywood sections.</p>
+	<div id="g-ai0-68" class="g-throughout_day absolute dayFive" style="top:44.9363%;right:4.0895%;width:5.6134%;">
+			<p class="g-pstyle14 sunday">Police acting on tips recover truckloads of looted merchandise.</p>
 		</div>
-
-		<div id="g-ai0-58" class="g-throughout_day absolute" style="top:42.5347%;right:30.4541%;width:7.0891%;">
-			<p class="g-pstyle14">The Los Angeles Unified School District expands its school closure to include every school and child-care center in the district.</p>
+	<div id="g-ai0-74 edward-song-lee" class="g-throughout_day absolute dayFive" style="top:46.0359%;right:4.005%;width:7.2338%;">
+			<p class="g-pstyle14 edward sunday">Federal authorities announce that the FBI and U.S. attorney general's office will investigate the torching of Korean-owned businesses and the attack on Denny, the truck driver.</p>
 		</div>
-
-
-		<div id="g-ai0-61" class="g-throughout_day absolute" style="top:43.316%;right:21.4094%;width:7.6389%;">
-			<p class="g-pstyle14">In addition to Los Angeles, schools are closed in Beverly Hills, Compton, Inglewood, Long Beach, Lynwood, Paramount and Torrance.</p>
+		<div id="g-ai0-84 edward-song-lee" class="g-throughout_day absolute dayFive" style="top:48.1481%;right:3.9958%;width:6.9734%;">
+			<p class="g-pstyle14 edward sunday">The South Korean Foreign Ministry announces that its government will send a delegation to Los Angeles to seek reparation for Korean American merchants who suffered damage during the unrest.</p>
 		</div>
-
-		<div id="g-ai0-63" class="g-throughout_day absolute" style="top:43.7789%;right:4.2103%;width:7.3785%;">
-			<p class="g-pstyle14">Ueberroth and Wilson take separate tours of riot-damaged sections of Los Angeles County.</p>
-		</div>
-		<div id="g-ai0-64" class="g-throughout_day absolute" style="top:44.0683%;right:30.036%;width:6.9444%;">
-			<p class="g-pstyle14">Cal State Los Angeles, Dominguez Hills and Northridge cancel classes. Final exams are postponed at USC.</p>
-		</div>
-		<div id="g-ai0-65" class="g-throughout_day absolute" style="top:44.2708%;right:12.5498%;width:7.3206%;">
-			<p class="g-pstyle14">Authorities report no new major fires and few major riot-related criminal incidents for the first time since the violence erupted Wednesday.</p>
+	<div id="g-ai0-96" class="g-throughout_day absolute dayFive" style="top:50.7234%;right:4.0633%;width:7.0602%;">
+			<p class="g-pstyle14 sunday">Federal, state and local emergency officials announce that one-stop disaster-assistance centers will open by week's end.</p>
 		</div>
 
-		<div id="g-ai0-67" class="g-throughout_day absolute" style="top:44.9074%;right:21.3144%;width:6.4525%;">
-			<p class="g-pstyle14">Colleges and universities remain closed.</p>
-		</div>
-		<div id="g-ai0-68" class="g-throughout_day absolute" style="top:44.9363%;right:4.0895%;width:5.6134%;">
-			<p class="g-pstyle14">Police acting on tips recover truckloads of looted merchandise.</p>
-		</div>
-
-		<div id="g-ai0-70" class="g-throughout_day absolute" style="top:45.544%;right:20.9608%;width:6.2211%;">
-			<p class="g-pstyle14">Many airlines cancel flights into LAX, and many travelers opt instead to use airports in outlying cities.</p>
-		</div>
-		<div id="g-ai0-71" class="g-throughout_day absolute" style="top:45.6019%;right:29.7137%;width:6.8866%;">
-			<p class="g-pstyle14">Government offices, courthouses, libraries, shopping malls and many businesses are shut down for the day.</p>
-		</div>
-
-		<div id="g-ai0-73" class="g-throughout_day absolute" style="top:45.8912%;right:12.3457%;width:6.6551%;">
-			<p class="g-pstyle14">County officials close an eight-mile stretch of beach in Venice and Playa del Rey.</p>
-		</div>
-		<div id="g-ai0-74 edward-song-lee" class="g-throughout_day absolute" style="top:46.0359%;right:4.005%;width:7.2338%;">
-			<p class="g-pstyle14 edward">Federal authorities announce that the FBI and U.S. attorney general's office will investigate the torching of Korean-owned businesses and the attack on Denny, the truck driver.</p>
-		</div>
-
-		<div id="g-ai0-77" class="g-throughout_day absolute" style="top:47.0486%;right:12.2902%;width:6.8866%;">
-			<p class="g-pstyle14">More than 3,500 National Guard troops are on the streets, with 1,000 more in staging areas. Army and Marine forces remain largely in staging areas.</p>
-		</div>
-		<div id="g-ai0-78" class="g-throughout_day absolute" style="top:47.1354%;right:21.0671%;width:7.7546%;">
-			<p class="g-pstyle14">Up to 25,000 residents still are without electricity.</p>
-		</div>
-
-		<div id="g-ai0-80" class="g-throughout_day absolute" style="top:47.2222%;right:29.6883%;width:6.3368%;">
-			<p class="g-pstyle14">Mail service is suspended to 14 ZIP Codes.</p>
-		</div>
-
-		<div id="g-ai0-82" class="g-crosshair absolute " style="top:47.9968%;margin-top:-12.8px;left:49.4182%;width:61px;">
-			<p>12:00</p>
-		</div>
-		<div id="g-ai0-83" class="g-throughout_day absolute" style="top:47.8299%;right:29.4795%;width:6.9734%;">
-			<p class="g-pstyle14">A power outage leaves thousands in the dark.</p>
-		</div>
-		<div id="g-ai0-84 edward-song-lee" class="g-throughout_day absolute" style="top:48.1481%;right:3.9958%;width:6.9734%;">
-			<p class="g-pstyle14 edward">The South Korean Foreign Ministry announces that its government will send a delegation to Los Angeles to seek reparation for Korean American merchants who suffered damage during the unrest.</p>
-		</div>
-		<div id="g-ai0-85" class="g-throughout_day absolute" style="top:48.4664%;right:29.485%;width:6.9155%;">
-			<p class="g-pstyle14">Long lines form at supermarkets and gas stations throughout the city as residents, fearing shortages, stock up.</p>
-		</div>
-
-
-		<div id="g-ai0-96" class="g-throughout_day absolute" style="top:50.7234%;right:4.0633%;width:7.0602%;">
-			<p class="g-pstyle14">Federal, state and local emergency officials announce that one-stop disaster-assistance centers will open by week's end.</p>
-		</div>
-
-		<div id="g-ai0-101" class="g-throughout_day absolute" style="top:52.3438%;right:4.0232%;width:6.8287%;">
-			<p class="g-pstyle14">Many school districts, including Los Angeles, Inglewood and Beverly Hills, announce that classes will resume Monday.</p>
+		<div id="g-ai0-101" class="g-throughout_day absolute dayFive" style="top:52.3438%;right:4.0232%;width:6.8287%;">
+			<p class="g-pstyle14 sunday">Many school districts, including Los Angeles, Inglewood and Beverly Hills, announce that classes will resume Monday.</p>
 		</div>
 		
-		<div id="g-ai0-107" class="g-throughout_day absolute" style="top:53.9352%;right:4.2789%;width:7.2049%;">
-			<p class="g-pstyle14">Normal class schedules also are announced for USC and University of California campuses.</p>
+		<div id="g-ai0-107" class="g-throughout_day absolute dayFive" style="top:53.9352%;right:4.2789%;width:7.2049%;">
+			<p class="g-pstyle14 sunday">Normal class schedules also are announced for USC and University of California campuses.</p>
+		</div>
+		<div id="g-ai0-111" class="g-throughout_day absolute dayFive" style="top:55.0637%;right:4.3638%;width:7.1759%;">
+			<p class="g-pstyle14 sunday">Democratic presidential hopeful Bill Clinton arrives in Los Angeles to meet with community leaders and to inspect the hard-hit areas.</p>
 		</div>
 
-	
-		<div id="g-ai0-111" class="g-throughout_day absolute" style="top:55.0637%;right:4.3638%;width:7.1759%;">
-			<p class="g-pstyle14">Democratic presidential hopeful Bill Clinton arrives in Los Angeles to meet with community leaders and to inspect the hard-hit areas.</p>
+		<div id="g-ai0-114" class="g-throughout_day absolute dayFive" style="top:56.684%;right:4.6565%;width:5.9606%;">
+			<p class="g-pstyle14 sunday">Authorities say most of the 1,200 backup federal law enforcement officers will leave Monday.</p>
 		</div>
 
-		<div id="g-ai0-114" class="g-throughout_day absolute" style="top:56.684%;right:4.6565%;width:5.9606%;">
-			<p class="g-pstyle14">Authorities say most of the 1,200 backup federal law enforcement officers will leave Monday.</p>
+		<div id="g-ai0-119" class="g-throughout_day absolute dayFive" style="top:58.2755%;right:4.8043%;width:6.0185%;">
+			<p class="g-pstyle14 sunday">Nearly 8,500 members of the Marines, Army and National Guard are posted throughout the county.</p>
 		</div>
 
-		<div id="g-ai0-119" class="g-throughout_day absolute" style="top:58.2755%;right:4.8043%;width:6.0185%;">
-			<p class="g-pstyle14">Nearly 8,500 members of the Marines, Army and National Guard are posted throughout the county.</p>
+		<!--NOON CLOCK-->
+
+		<div id="noon" class="g-crosshair absolute " style="top:47.9968%;margin-top:-12.8px;left:49.3%;width:61px;">
+			<p>12:00</p>
 		</div>
 		
 		<!--names-->
@@ -621,7 +761,7 @@
 			<span class='tooltiptext'>Jimmie Harris, a 38-year-old black man, died Monday, May 4, 1992, at a local hospital. Harris was involved in a car accident April 29 at the intersection of Avalon Boulevard and Slauson Avenue in South Park.</span>
 		</div>
 		<div id="dwight-taylor" class="g-deaths absolute tooltip" style="top:75.0289%;right:90.0324%">
-			<p class="d1-names">Dwight Taylor</p>
+			<p class="d1-names dtaylor">Dwight Taylor</p>
 			<span class='tooltiptext'>Dwight Taylor, a 42-year-old black man, was fatally shot Wednesday, April 29, 1992, in the 4300 block of South Vermont Avenue in Vermont Square.<br>
 			Taylor was taken to a local hospital, where he died.<br>
 			Taylor, a former Cal State Long Beach basketball player, still loved to show off his ball handling to youngsters on the courts around South Los Angeles.<br>
@@ -674,7 +814,6 @@
 		</div>
 		<div id="edward-song-lee" class="g-deaths absolute tooltip" d-orignal="top:92.5347%;right:71.3131%;" style="top:92.5347%;right:71.3131%;">
 			<p class="d2-names edward">Edward Song Lee </p>
-			<span class='tooltiptext'>Edward Song Lee, an 18-year-old Asian man, was shot and killed Thursday, April 30, 1992, in Koreatown. Lee, a Korean American, was attempting to protect shops near 3rd Street and Hobart Boulevard when he was apparently shot by fellow Korean Americans who mistook him for a looter.</span>
 		</div>
 		<div id="g-ai0-43" class="g-deaths absolute tooltipRT" style="top:92.8819%;left:69.3319%;">
 			<p class="d2-names">Elbert O. Wilkins </p>
@@ -1025,8 +1164,9 @@
 		</div>
 		
 	</div>
-	
+	<div id='spacer' style='height: 2000px; float:right;'></div>
 </div>
+<div class="jquery"></div>
 
 <script>
 var dayOne = d3.selectAll('.dayOne');
@@ -1036,9 +1176,11 @@ var dayFour = d3.selectAll('.dayFour');
 var dayFive = d3.selectAll('.dayFive');
 
 var dayOneImages = d3.selectAll('.dayOneImages');
+var dayTwoImages = d3.selectAll('.dayTwoImages')
 
 var edward = d3.selectAll('p.edward');
 var tranh = d3.selectAll('#tranh-lam p.tranh');
+var dtaylor = d3.selectAll('p.dtaylor');
 
 // ORIGINAL POSITION CREATOR
 let names = d3.selectAll('.g-deaths')
@@ -1120,6 +1262,7 @@ names.on('click', function() {
 	let records = d3.selectAll('p.edward')
 	let allP = d3.selectAll('p')
 	let edImage = d3.selectAll('.edwardimg')
+	let dtaylorimg = d3.selectAll('.dtaylorimg')
 	// console.log("button", button)
 	var originalStyle = this.getAttribute("d-original");
 	// console.log(originalStyle);
@@ -1142,6 +1285,7 @@ names.on('click', function() {
             // lines.transition().duration(3500).style('visibility', 'hidden'); //edward-specific. needs to be a longer delay than the on.click function below
             allP.style('opacity', '1');
             edImage.transition().delay(3001).style('visibility', 'hidden'); //has to be later than the click delay because it reappears after 3000 on click below
+            dtaylorimg.transition().delay(3001).style('visibility', 'hidden');
             // records.style('color', null) //this removes the added color only
             // buttonColor.style.color = originalColor; //attempt at keeping original color
             status = "center";
@@ -1159,6 +1303,7 @@ d3.select('#dayOneCircle') //select dayOne records
 		dayFour.style('opacity', '0.2');
 		dayFive.style('opacity', '0.2');
 		dayOneImages.style('visibility', 'visible'); //brings up images
+		dayTwoImages.style('visibility', 'hidden'); //brings up images
 	});
 	
 d3.select('#dayTwoCircle') //select dayTwo records
@@ -1170,6 +1315,7 @@ d3.select('#dayTwoCircle') //select dayTwo records
 		dayFour.style('opacity', '0.2');
 		dayFive.style('opacity', '0.2');
 		dayOneImages.style('visibility', 'hidden'); //hides dayOneImages
+		dayTwoImages.style('visibility', 'visible'); //brings up images
 	});
 	
 d3.select('#dayThreeCircle') //select dayThree records
@@ -1181,6 +1327,7 @@ d3.select('#dayThreeCircle') //select dayThree records
 		dayFour.style('opacity', '0.2');
 		dayFive.style('opacity', '0.2');
 		dayOneImages.style('visibility', 'hidden');
+		dayTwoImages.style('visibility', 'hidden'); //brings up images
 	});
 	
 d3.select('#dayFourCircle') //select dayFour records
@@ -1192,6 +1339,7 @@ d3.select('#dayFourCircle') //select dayFour records
 		dayFour.style('opacity', '1');
 		dayFive.style('opacity', '0.2');
 		dayOneImages.style('visibility', 'hidden');
+		dayTwoImages.style('visibility', 'hidden'); //brings up images
 	});
 	
 d3.select('#dayFiveCircle') //select dayFive records
@@ -1203,6 +1351,7 @@ d3.select('#dayFiveCircle') //select dayFive records
 		dayFour.style('opacity', '0.2');
 		dayFive.style('opacity', '1');
 		dayOneImages.style('visibility', 'hidden');
+		dayTwoImages.style('visibility', 'hidden'); //brings up images
 	});
 
 d3.select('#resetCircle') //resets all circles
@@ -1214,6 +1363,7 @@ d3.select('#resetCircle') //resets all circles
 		dayFour.style('opacity', '1');
 		dayFive.style('opacity', '1');
 		dayOneImages.style('visibility', 'hidden'); //brings up images
+		dayTwoImages.style('visibility', 'hidden'); //brings up images
 	});
 
 //START HOVER FOR NAMES
@@ -1299,6 +1449,13 @@ tranh.on('click', function () {
     	records.transition().delay(3000).style('opacity', '1');
 });
 
+dtaylor.on('click', function () {
+	let photo = d3.selectAll('.dtaylorimg')
+	dtaylor.transition().delay(3000).style('opacity', '1');
+	photo.transition().delay(3000).style('visibility', 'visible');
+})
+
+
 //need to create an onclick for each name. also each name needs id of their name. would be clean to make them each a variable.
 
 
@@ -1315,12 +1472,43 @@ d3.selectAll('.flex-item img')
                 });
 //END FLEXBOX SCRIPT
 
+//MOUSE NAVIGATION START
+            // d3 mouse move
+            $(document).ready(function(){
+                var svg = d3.select('#container')
+                .on('mousemove', function() {
+                  console.log('Mouse', d3.event.clientX, d3.event.clientY ) // log the mouse x,y position
+                  
+                  // computed container width
+                  var w = d3.select(this).node().getBoundingClientRect().width;
+                  var h = d3.select(this).node().getBoundingClientRect().height;
+                  console.log('Container width', w, 'height', h);
+                  console.log(window.innerHeight);
+
+                  d3.select(this)
+                    .style('left', function() {
+                        return (window.innerWidth-w+((window.innerWidth-d3.event.clientX)*w/window.innerWidth))+'px';
+                    })
+                    .style('top', function() {
+                        return (window.innerHeight-h+((window.innerHeight-d3.event.clientY)*h/window.innerHeight))+'px';
+                    });
+                });
+            });
+            
+            // jQuery mouse move
+            $(document).ready(function(){
+              $(document).mousemove(function(e){
+                  $('.jquery').css({'top': e.pageY,'left': e.pageX});
+              });
+            });
+            
 
 </script>
 
 <!--<svg class="edwardlee" height="2000" width="2000" style="top:69%;right:4%">-->
 <!--  <line x1="850" y1="25" x2="1700" y2="500" style="stroke:rgb(0,0,255);stroke-width:2" />-->
 <!--</svg>-->
+
 
 </body>
 </html>

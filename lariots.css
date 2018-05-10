@@ -2,6 +2,23 @@
 	margin:0 auto;
 }
 
+.pointer  {
+    position: absolute;
+    background: lavender;
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#container {
+    /*background: radial-gradient(#e66465, #9198e5);*/
+    position: absolute;
+    z-index:3;
+}
+img #background {
+    min-width: 3456px;
+}
+
 body { margin:0;position:absolute;top:0;right:0;bottom:0;left:0; }
 
 .artboard p {
@@ -87,6 +104,11 @@ p {
 	
 }
 
+.g-crosshair {
+	font-size: 24px;
+	color: rgb(139,0,0);
+}
+
 .title {
 	font-size:59px;
 	line-height:71px;
@@ -132,10 +154,11 @@ p {
     cursor: pointer;
     position: relative;
     z-index: 6;
+    max-width: 400px;
 }
 
 .caption {
-    max-width: 290px;
+    max-width: 390px;
     /*height: 100px;*/
     padding: 5px;
     background-color: white;
@@ -162,6 +185,27 @@ p {
 }
 
 .edcaption {
+	max-width: 390px;
+	min-width: 390px;
+	padding: 5px;
+	background-color: white;
+	font-family: 'proxima-soft-condensed';
+	font-weight: 400;
+}
+
+.dtaylorimg {
+	z-index: 6;
+	position: absolute;
+	display: block;
+	visibility: hidden;
+}
+
+.dtaylorimg img {
+	/*min-height: 400px;*/
+	max-width: 400px;
+}
+
+.dtaylorcaption {
 	max-width: 390px;
 	min-width: 390px;
 	padding: 5px;
