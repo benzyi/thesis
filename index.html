@@ -12,7 +12,7 @@
 	</style>
 </head>
 
-<body>
+<!--<body>-->
 
 
 
@@ -27,9 +27,10 @@
 
 
 <!--MAIN-->
-<div id='container' class="wrapper">
+<div id='container' class="wrapper" style="top:0%;left:0%;">
+	<div id='spacer' style='height: 2000px; float:right;'></div>
 	<!-- Background -->
-	<div id="background" class="artboard" height='3456' width="3456">
+	<div id="background" class="artboard" height='3456' width="3456" style="top:0%;left:0%;">
 		<img class="background" src="background.png"/>
 		<!--<img class="background" src="guidelines-01.png"/>-->
 		<div id="dayOneCircle" style="top: 1257px;left: 1257px;"></div>
@@ -1164,7 +1165,7 @@
 		</div>
 		
 	</div>
-	<div id='spacer' style='height: 2000px; float:right;'></div>
+	<div id='spacer' style='height: 100px; float:right;'></div>
 </div>
 <div class="jquery"></div>
 
@@ -1255,10 +1256,11 @@ arr.map(function(x){  //separates out the array
 
 var status = "original";
 var originalTop, originalRight; //var to be filled later. currently a placeholder.
+var button, centerButton;
+var nameIsCenter=0;
 
 names.on('click', function() {
-	let button = d3.select(this)
-	// let lines = d3.select('svg.edwardlee')
+	button = d3.select(this)
 	let records = d3.selectAll('p.edward')
 	let allP = d3.selectAll('p')
 	let edImage = d3.selectAll('.edwardimg')
@@ -1266,32 +1268,66 @@ names.on('click', function() {
 	// console.log("button", button)
 	var originalStyle = this.getAttribute("d-original");
 	// console.log(originalStyle);
-    switch (status) {
-        case "center":
-			// console.log(button)
-        	button.style('top', '42%');
-        	allP.style('opacity', '0.2');
-        	button.style('right', '45%');
-            button.style('transition', 'all 3s');
-            button.style('font-size', '50px');
+	if(nameIsCenter==1) {
+		// console.log("there's a center name");
+		// console.log(centerButton.id);
 
-            // buttonColor.style.color="blue"; //attempt at keeping original color
-            status = "original";
-            break;
+		var centerOriginalStyle = centerButton.getAttribute("d-original");
+        d3.select("#"+centerButton.id).attr('style', centerOriginalStyle);
+        d3.select("#"+centerButton.id).style('transition', 'all 3s');
 
-        case "original":
-            button.attr('style', originalStyle);
-            button.style('transition', 'all 3s');
-            // lines.transition().duration(3500).style('visibility', 'hidden'); //edward-specific. needs to be a longer delay than the on.click function below
-            allP.style('opacity', '1');
-            edImage.transition().delay(3001).style('visibility', 'hidden'); //has to be later than the click delay because it reappears after 3000 on click below
-            dtaylorimg.transition().delay(3001).style('visibility', 'hidden');
-            // records.style('color', null) //this removes the added color only
-            // buttonColor.style.color = originalColor; //attempt at keeping original color
-            status = "center";
-            break;
-    }
+	    switch (status) {
+	        case "center": //move to center
+				// console.log(button)
+	        	button.style('top', '42%');
+	        	allP.style('opacity', '0.2');
+	        	button.style('right', '45%');
+	            button.style('transition', 'all 3s');
+	            button.style('font-size', '50px');
+	            status = "original";
+	            nameIsCenter = 1;
+	            centerButton = button;
+	            break;
+	
+	        case "original":
+	            button.attr('style', originalStyle);
+	            button.style('transition', 'all 3s');
+	            allP.style('opacity', '1');
+	            edImage.transition().delay(3001).style('visibility', 'hidden'); //has to be later than the click delay because it reappears after 3000 on click below
+	            dtaylorimg.transition().delay(3001).style('visibility', 'hidden');
+	            status = "center";
+	            nameIsCenter = 0;
+	            centerButton = this;
+	            break;
+	    }
+	}
+	
+	else {
+		switch (status) {
+	        case "center": //move to center
+	        	button.style('top', '42%');
+	        	allP.style('opacity', '0.2');
+	        	button.style('right', '45%');
+	            button.style('transition', 'all 3s');
+	            button.style('font-size', '50px');
+	            status = "original";
+	            nameIsCenter = 1;
+	            centerButton = this;
+	            break;
+
+	        case "original":
+	            button.attr('style', originalStyle);
+	            button.style('transition', 'all 3s');
+	            allP.style('opacity', '1');
+	            edImage.transition().delay(3001).style('visibility', 'hidden'); //has to be later than the click delay because it reappears after 3000 on click below
+	            status = "center";
+	            nameIsCenter = 0;
+	            centerButton = this;
+	            break;
+	    }
+	}
 });
+
 
 // START CIRCLES 	
 d3.select('#dayOneCircle') //select dayOne records
@@ -1481,16 +1517,16 @@ d3.selectAll('.flex-item img')
                   
                   // computed container width
                   var w = d3.select(this).node().getBoundingClientRect().width;
-                  var h = d3.select(this).node().getBoundingClientRect().height;
+                  var h = d3.select(this).node().getBoundingClientRect().height/1.15;
                   console.log('Container width', w, 'height', h);
                   console.log(window.innerHeight);
 
-                  d3.select(this)
+                  d3.select(this) //so this is moving the image's left and top by a certain amount of pixels based on the mouse
                     .style('left', function() {
                         return (window.innerWidth-w+((window.innerWidth-d3.event.clientX)*w/window.innerWidth))+'px';
                     })
                     .style('top', function() {
-                        return (window.innerHeight-h+((window.innerHeight-d3.event.clientY)*h/window.innerHeight))+'px';
+                        return (window.innerHeight-h+((window.innerHeight-d3.event.clientY)*(h)/window.innerHeight))+'px';
                     });
                 });
             });
@@ -1510,5 +1546,5 @@ d3.selectAll('.flex-item img')
 <!--</svg>-->
 
 
-</body>
+<!--</body>-->
 </html>
