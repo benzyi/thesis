@@ -7,14 +7,20 @@
     background: lavender;
     width: 100px;
     height: 100px;
-    margin-left: 50px;
-    margin-top: 50px;
+    margin-left: -50px;
+    margin-top: -50px;
 }
 #container {
-    /*background: radial-gradient(#e66465, #9198e5);*/
+    background: rgb(176,176,176);
     position: absolute;
     z-index:3;
+    transition: all 0.2s linear;
+    /*transition: all 1.5s cubic-bezier(.62,.21,.37,.45); */
+    /*top: 0px;*/
+    /*left: 0px;*/
+    /*vertical-align:top;*/
 }
+
 img #background {
     min-width: 3456px;
 }
@@ -30,6 +36,7 @@ body { margin:0;position:absolute;top:0;right:0;bottom:0;left:0; }
 .background {
 	display:block;
 	width:100% !important;
+	vertical-align:top;
 }
 
 /*polygons for alignment START*/
@@ -63,8 +70,8 @@ body { margin:0;position:absolute;top:0;right:0;bottom:0;left:0; }
 }
 
 .g-polygon-title {
-	shape-outside: polygon(100% 38%, 70% 53%, 33% 73%, 4% 100%, 100% 100%);
-	clip-path: polygon(100% 38%, 70% 53%, 33% 73%, 4% 100%, 100% 100%);
+	shape-outside: polygon(100% 0%, 55% 0, 66% 16%, 83% 32%, 100% 44%);
+	clip-path: polygon(100% 0%, 55% 0, 66% 16%, 83% 32%, 100% 44%);
 	float: right;
 	background: transparent;
 }
@@ -270,6 +277,62 @@ p {
 }
 /*CIRCLES FOR CLICKING END*/
 
+/*TESTING CIRCLE FOR HOVER*/
+#dayOneHover {
+	background-color: dodgerblue;
+	opacity: 0.07;
+	width: 935px;
+	height: 935px;
+	border-radius: 100%;
+	position: absolute;
+	visibility: hidden;
+	z-index: 1;
+}
+
+#dayTwoHover {
+	background-color: dodgerblue;
+	opacity: 0.07;
+	width: 1480px;
+	height: 1480px;
+	border-radius: 100%;
+	position: absolute;
+	visibility: hidden;
+	z-index: 1;
+}
+
+#dayThreeHover {
+	background-color: dodgerblue;
+	opacity: 0.07;
+	width: 2060px;
+	height: 2060px;
+	border-radius: 100%;
+	position: absolute;
+	visibility: hidden;
+	z-index: 1;
+}
+
+#dayFourHover {
+	background-color: dodgerblue;
+	opacity: 0.07;
+	width: 2635px;
+	height: 2635px;
+	border-radius: 100%;
+	position: absolute;
+	visibility: hidden;
+	z-index: 1;
+}
+
+#dayFiveHover {
+	background-color: dodgerblue;
+	opacity: 0.07;
+	width: 3193px;
+	height: 3190px;
+	border-radius: 100%;
+	position: absolute;
+	visibility: hidden;
+	z-index: 0;
+}
+
 .sunday-time {
 	height:17px;
 	color:rgb(1,53,76);
@@ -439,6 +502,9 @@ p {
 	font-size:40px;
 	line-height:48px;
 	height:48px;
+	font-family: adobe-caslon-pro;
+	font-style: normal;
+	color: white;
 	text-align:justify;
 }
 .g-pstyle31 {
@@ -482,6 +548,27 @@ p {
     /* If you want dots under the hoverable text */
 }
 
+.tooltipR .tooltiptextR {
+    visibility: hidden;
+    font-family: 'proxima-soft-condensed';
+    color: rgb(139,0,0);
+    font-weight: 300;
+    font-size: 24px;
+    width: 500px;
+    bottom: 0px;
+    left: -72%; 
+    top: 82%;
+    /*background-color: white;*/
+    text-align: center;
+    /*padding: 5px;*/
+    border-radius: 3px;
+    position: absolute;
+}
+
+.tooltipR:hover .tooltiptextR {
+    visibility: visible;
+}
+
 /* Tooltip text */
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -490,7 +577,7 @@ p {
     font-weight: 300;
     font-size: 18px;
     width: 500px;
-    bottom: 0px;
+    top: 0px;
     left: 115%; 
     background-color: white;
     text-align: left;
@@ -511,7 +598,7 @@ p {
     font-weight: 300;
     font-size: 18px;
     width: 500px;
-    bottom: 0px;
+    top: 0px;
     right: 115%; 
     background-color: white;
     text-align: left;
