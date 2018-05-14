@@ -221,6 +221,27 @@ p {
 	font-weight: 400;
 }
 
+.jtaylorimg {
+	z-index: 6;
+	position: absolute;
+	display: block;
+	visibility: hidden;
+}
+
+.jtaylorimg img {
+	/*min-height: 400px;*/
+	max-width: 400px;
+}
+
+.jtaylorcaption {
+	max-width: 390px;
+	min-width: 390px;
+	padding: 5px;
+	background-color: white;
+	font-family: 'proxima-soft-condensed';
+	font-weight: 400;
+}
+
 /*CIRCLES FOR CLICKING*/
 #dayOneCircle {
 	background-color: transparent;
@@ -515,11 +536,8 @@ p {
 	color:rgb(0,113,198);
 }
 .g-pstyle32 {
-	font-size:12px;
-	line-height:14px;
-	filter:alpha(opacity=90);
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-	opacity:0.9;
+	font-size:20px;
+	line-height:26px;
 	color:rgb(255,255,255);
 }
 
