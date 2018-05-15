@@ -2204,7 +2204,7 @@ d3.selectAll('.flex-item img')
 
                   d3.select(this) //so this is moving the image's left and top by a certain amount of pixels based on the mouse
                     .style('left', function() {
-                        return (window.innerWidth/3.9-w/3.9+((window.innerWidth/3.9-d3.event.clientX)*w/window.innerWidth/3.9))+'px'; //was 3.8
+                        return (window.innerWidth/3.5-w/3.5+((window.innerWidth/3.5-d3.event.clientX)*w/window.innerWidth/3.5))+'px'; //was 3.8
                     })
                     .style('top', function() {
                         return (window.innerHeight/1.5-h/1.5+((window.innerHeight/1.5-d3.event.clientY)*h/window.innerHeight/1.5))+'px'; //was 1.6
