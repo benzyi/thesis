@@ -2191,33 +2191,33 @@ d3.selectAll('.flex-item img')
 
 //MOUSE NAVIGATION START
             // d3 mouse move
-            // $(document).ready(function(){
-            //     var svg = d3.select('#container')
-            //     .on('mousemove', function() {
-            //       console.log('Mouse', d3.event.clientX, d3.event.clientY ) // log the mouse x,y position
+            $(document).ready(function(){
+                var svg = d3.select('#container')
+                .on('mousemove', function() {
+                  console.log('Mouse', d3.event.clientX, d3.event.clientY ) // log the mouse x,y position
                   
-            //       // computed container width
-            //       var w = d3.select(this).node().getBoundingClientRect().width;
-            //       var h = d3.select(this).node().getBoundingClientRect().height;
-            //       console.log('Container width', w, 'height', h);
-            //       console.log(window.innerHeight);
+                  // computed container width
+                  var w = d3.select(this).node().getBoundingClientRect().width;
+                  var h = d3.select(this).node().getBoundingClientRect().height;
+                  console.log('Container width', w, 'height', h);
+                  console.log(window.innerHeight);
 
-            //       d3.select(this) //so this is moving the image's left and top by a certain amount of pixels based on the mouse
-            //         .style('left', function() {
-            //             return (window.innerWidth/3.8-w/3.8+((window.innerWidth/3.8-d3.event.clientX)*w/window.innerWidth/3.8))+'px';
-            //         })
-            //         .style('top', function() {
-            //             return (window.innerHeight/1.6-h/1.6+((window.innerHeight/1.6-d3.event.clientY)*h/window.innerHeight/1.6))+'px';
-            //         });
-            //     });
-            // });
+                  d3.select(this) //so this is moving the image's left and top by a certain amount of pixels based on the mouse
+                    .style('left', function() {
+                        return (window.innerWidth/3.8-w/3.8+((window.innerWidth/3.8-d3.event.clientX)*w/window.innerWidth/3.8))+'px';
+                    })
+                    .style('top', function() {
+                        return (window.innerHeight/1.6-h/1.6+((window.innerHeight/1.6-d3.event.clientY)*h/window.innerHeight/1.6))+'px';
+                    });
+                });
+            });
             
-            // // jQuery mouse move
-            // $(document).ready(function(){
-            //   $(document).mousemove(function(e){
-            //       $('.jquery').css({'top': e.pageY,'left': e.pageX});
-            //   });
-            // });
+            // jQuery mouse move
+            $(document).ready(function(){
+              $(document).mousemove(function(e){
+                  $('.jquery').css({'top': e.pageY,'left': e.pageX});
+              });
+            });
             
 
 </script>
