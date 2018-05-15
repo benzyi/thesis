@@ -21,6 +21,11 @@
     /*vertical-align:top;*/
 }
 
+a {
+	color: white;
+	text-decoration: none;
+}
+
 img #background {
     min-width: 3456px;
 }
